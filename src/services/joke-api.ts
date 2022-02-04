@@ -1,0 +1,15 @@
+//import axios from 'axios';
+import Joke from '../models/Joke';
+import axios from 'axios';
+
+export function fetchJokes(): Promise<Joke[]>{
+
+    return axios.get('https://dad-jokes.p.rapidapi.com/random/joke', {
+        headers: {
+            'x-rapidapi-host': 'dad-jokes.p.rapidapi.com',
+            'x-rapidapi-key': "9df1725049msh095042c0e3995c9p1e028ajsn08b2d900b2b8"
+        },
+    })
+    .then((res) => res.data.body);
+ 
+};
