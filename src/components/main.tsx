@@ -1,25 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { IceBreakers } from "../models/Icebreakers";
 import Joke from "../models/Joke";
-import { getIceBreakers } from "../services/icebreaker-api";
+
 import { fetchJokes } from "../services/joke-api";
 
 const Main = () => {
   //HOOKS
   const [joke, setJoke] = useState<Joke[]>([]);
-  const [icebreaker, setIcebreaker] = useState<IceBreakers[]>([]);
 
   //JOKE useEffect.
   useEffect(() => {
     fetchJokes().then((data) => setJoke(data));
   }, []);
-
-  //ICEBREAKER useEffect.
-  useEffect(() => {
-    getIceBreakers().then((data) => setIcebreaker(data));
-  }, []);
-  //console.log(icebreaker); - RETURNED ARRAY
 
   console.log(joke);
   return (
@@ -30,12 +21,21 @@ const Main = () => {
       <div className="tool-container">
         <div className="feature-container">
           <h2>Trivia</h2>
+          <p>
+            Want to see who's the smartest in the room or who knows the most
+            random facts?
+          </p>
         </div>
         <div className="feature-container">
           <h2>Icebreakers</h2>
+          <p>
+            What do you do for work? Do you like animals? Those are lame
+            questions! Be the cool person with great icebreakers.
+          </p>
         </div>
         <div className="feature-container">
           <h2>Jokes</h2>
+          <p></p>
         </div>
       </div>
     </div>
