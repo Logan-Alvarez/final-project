@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { IceBreakers } from "../models/Icebreakers";
 import Joke from "../models/Joke";
 import { getIceBreakers } from "../services/icebreaker-api";
@@ -28,9 +29,15 @@ const Main = () => {
       </header>
       <div>
         <ul className="main-navigation">
-          <li>Trivia</li>
-          <li>IceBreakers</li>
-          <li>Jokes</li>
+          <Link to={"/Trivia"}>
+            <li>Trivia</li>
+          </Link>
+          <Link to={"/Icebreakers"}>
+            <li>IceBreakers</li>
+          </Link>
+          <Link to={"/Jokes"}>
+            <li>Jokes</li>
+          </Link>
         </ul>
       </div>
     </div>
