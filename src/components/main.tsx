@@ -27,18 +27,16 @@ const Main = () => {
       <header>
         <h1>Logo</h1>
       </header>
-      <div>
-        <ul className="main-navigation">
-          <Link to={"/Trivia"}>
-            <li>Trivia</li>
-          </Link>
-          <Link to={"/Icebreakers"}>
-            <li>IceBreakers</li>
-          </Link>
-          <Link to={"/Jokes"}>
-            <li>Jokes</li>
-          </Link>
-        </ul>
+      <div className="tool-container">
+        <div className="feature-container">
+          <h2>Trivia</h2>
+        </div>
+        <div className="feature-container">
+          <h2>Icebreakers</h2>
+        </div>
+        <div className="feature-container">
+          <h2>Jokes</h2>
+        </div>
       </div>
     </div>
   );
