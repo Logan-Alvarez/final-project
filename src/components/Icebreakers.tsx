@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import { getIceBreakers } from "../services/icebreaker-api";
 import { IceBreakers } from "../models/Icebreakers";
+import { IcebreakerList } from "./IcebreakerList";
 
-export function IceBreakers() {
+export function Icebreakers() {
   //HOOK
-  const [icebreaker, setIcebreaker] = useState<IceBreakers[]>([]);
+  const [icebreakers, setIcebreaker] = useState<IceBreakers[]>([]);
 
   //ICEBREAKER useEffect.
   useEffect(() => {
     getIceBreakers().then((data) => setIcebreaker(data));
   }, []);
-  //console.log(icebreaker); - RETURNED ARRAY
+  // console.log(icebreakers); - RETURNED ARRAY
 
   return (
-    <div>
+    <div className="Icebreakers">
       <h1>Icebreakers</h1>
+      <IcebreakerList icebreakers={icebreakers} />
     </div>
   );
 }
