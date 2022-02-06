@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Main from "./components/main";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Icebreakers } from "./components/Icebreakers";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/icebreakers" element={<Icebreakers />} />
         </Routes>
       </Router>
     </div>
