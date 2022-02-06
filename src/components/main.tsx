@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Joke from "../models/Joke";
 
 import { fetchJokes } from "../services/joke-api";
@@ -26,16 +27,18 @@ const Main = () => {
             random facts?
           </p>
         </div>
-        <div className="feature-container">
-          <h2>Icebreakers</h2>
-          <p>
-            What do you do for work? Do you like animals? Those are lame
-            questions! Be the cool person with great icebreakers.
-          </p>
-        </div>
+        <Link to={"/icebreakers"}>
+          <div className="feature-container">
+            <h2>Icebreakers</h2>
+            <p>
+              What do you do for work? Do you like animals? Those are lame
+              questions! Be as cool as ice with great icebreakers.
+            </p>
+          </div>
+        </Link>
         <div className="feature-container">
           <h2>Jokes</h2>
-          <p></p>
+          <p>Be the funny person you were meant to be.</p>
         </div>
       </div>
     </div>
