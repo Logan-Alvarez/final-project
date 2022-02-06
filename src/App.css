@@ -20,6 +20,10 @@ body {
   background-color: var(--primary-color);
 }
 
+a:link {
+  text-decoration: none;
+}
+
 /* MAIN PAGE */
 .Main {
   height: 100%;
@@ -29,14 +33,12 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
   height: 100%;
 }
 
 .feature-container {
   text-align: center;
   background-color: var(--secondary-color);
-  width: 80%;
 }
 
 .tool-container h2 {
