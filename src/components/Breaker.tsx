@@ -7,8 +7,9 @@ interface Prop {
 export function Breaker({ icebreaker }: Prop) {
   return (
     <div className="Breaker">
-      <h3>{icebreaker.category}</h3>
-      <p>{icebreaker.question}</p>
+      <h3>Category- {icebreaker.category}</h3>
+      <p>Question- {icebreaker.question}</p>
+      <button> + favorites</button>
     </div>
   );
 }
