@@ -20,13 +20,15 @@ const Main = () => {
         <h1>Logo</h1>
       </header>
       <div className="tool-container">
-        <div className="feature-container">
-          <h2>Trivia</h2>
-          <p>
-            Want to see who's the smartest in the room or who knows the most
-            random facts?
-          </p>
-        </div>
+        <Link to={"/Trivia"}>
+          <div className="feature-container">
+            <h2>Trivia</h2>
+            <p>
+              Want to see who's the smartest in the room or who knows the most
+              random facts?
+            </p>
+          </div>
+        </Link>
         <Link to={"/icebreakers"}>
           <div className="feature-container">
             <h2>Icebreakers</h2>
@@ -36,10 +38,12 @@ const Main = () => {
             </p>
           </div>
         </Link>
-        <div className="feature-container">
-          <h2>Jokes</h2>
-          <p>Be the funny person you were meant to be.</p>
-        </div>
+        <Link to={"/Jokes"}>
+          <div className="feature-container">
+            <h2>Jokes</h2>
+            <p>Be the funny person you were meant to be.</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
