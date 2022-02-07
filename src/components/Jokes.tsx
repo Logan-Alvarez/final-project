@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import JokeResponse from "../models/Joke";
+import { jokes } from "../models/Joke";
 
 import { fetchJokes } from "../services/joke-api";
 import { JokesList } from "./JokesList";
 
 export function Jokes() {
   //HOOKS
-  const [jokes, setJoke] = useState<JokeResponse[]>([]);
+  const [jokes, setJoke] = useState<jokes[]>([]);
 
   //JOKE useEffect.
   useEffect(() => {
