@@ -45,6 +45,11 @@ a:link {
   color: var(--header-color);
 }
 
+
+.Logo {
+  width: 100px;
+}
+
 /* ICE BREAKER */
 
 .IcebreakerForm form{
@@ -53,3 +58,4 @@ a:link {
   width: 50%;
   text-align: center;
 }
+

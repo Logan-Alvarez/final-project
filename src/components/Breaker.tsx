@@ -9,7 +9,7 @@ export function Breaker({ icebreaker }: Prop) {
     <div className="Breaker">
       <h3>Category- {icebreaker.category}</h3>
       <p>Question- {icebreaker.question}</p>
-      <button> + favorites</button>
+      <button> + Favorites</button>
     </div>
   );
 }

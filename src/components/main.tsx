@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 
+import Joke from "../models/Joke";
+import logo from "../logo.gif";
+
+import { fetchJokes } from "../services/joke-api";
+=======
+
+
 const Main = () => {
   return (
     <div className="Main">
       <header>
-        <h1>Logo</h1>
+        {/* <h1>Logo</h1> */}
+        <img src={logo} alt="Logo" className="Logo" />
       </header>
       <div className="tool-container">
         <Link to={"/Trivia"}>

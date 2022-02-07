@@ -23,8 +23,16 @@ export function Icebreakers() {
   return (
     <div className="Icebreakers">
       <h1>Icebreakers</h1>
+
+      <div>
+        <a href="/">Back To Home</a>
+      </div>
+=======
       <IcebreakerForm onSubmit={handleIcebreakerSubmit}/>
+
       <IcebreakerList icebreakers={icebreakers} />
     </div>
   );
 }
+
+//This is the main folder for the icebreakers that loads data when clicked
