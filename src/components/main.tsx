@@ -1,11 +1,5 @@
 import { Link } from "react-router-dom";
-
-import Joke from "../models/Joke";
 import logo from "../logo.gif";
-
-import { fetchJokes } from "../services/joke-api";
-=======
-
 
 const Main = () => {
   return (
