@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import logo from "../logo.gif";
-
+import glow from "../images/glow.gif";
 const Main = () => {
   return (
     <div className="Main">
       <header>
-        {/* <h1>Logo</h1> */}
-        <img src={logo} alt="Logo" className="Logo" />
+        {/* <h1 className="title">Social Spark</h1> */}
+        {/* <img src={glow} alt="Logo" className="Logo" /> */}
       </header>
       <div className="tool-container">
         <Link to={"/Trivia"}>
