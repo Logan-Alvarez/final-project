@@ -44,3 +44,7 @@ a:link {
 .tool-container h2 {
   color: var(--header-color);
 }
+
+.Logo {
+  width: 100px;
+}
