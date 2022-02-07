@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #ddbea9;
-  --secondary-color: #ffe8d6;
-  --header-color: #6b705c;
-  --button-color: #a5a58d;
-  --text-color: #b7b7a4;
+  --primary-color: #0077b6;
+  --secondary-color: #023e8a;
+  --header-color: #0096c7;
+  --button-color: #00b4d8;
+  --text-color: #48cae4;
 }
 html {
   height: 100%;
