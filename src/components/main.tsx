@@ -1,20 +1,13 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import Joke from "../models/Joke";
 import logo from "../logo.gif";
 
 import { fetchJokes } from "../services/joke-api";
+=======
+
 
 const Main = () => {
-  //HOOKS
-  const [joke, setJoke] = useState<Joke[]>([]);
-
-  //JOKE useEffect.
-  useEffect(() => {
-    fetchJokes().then((data) => setJoke(data));
-  }, []);
-
-  console.log(joke);
   return (
     <div className="Main">
       <header>
