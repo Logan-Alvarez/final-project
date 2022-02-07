@@ -44,3 +44,12 @@ a:link {
 .tool-container h2 {
   color: var(--header-color);
 }
+
+/* ICE BREAKER */
+
+.IcebreakerForm form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+}
