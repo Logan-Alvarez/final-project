@@ -1,9 +1,17 @@
 import Data from "../models/Trivia";
+import SingleTrivia from "./SingleTrivia";
 
 interface Prop {
-  trivia: Data[];
+  trivias: Data[];
 }
 
-export function TriviaList({ trivia }: Prop) {
-  return <div className="TriviaList"></div>;
+export function TriviaList({ trivias }: Prop) {
+  return (
+    <div className="TriviaList">
+      <h3>How Smart Are You?</h3>
+      {trivias.map((trivia, i) => (
+        <SingleTrivia key={i} trivia={trivia} />
+      ))}
+    </div>
+  );
 }
