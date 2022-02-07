@@ -1,7 +1,6 @@
 //import axios from 'axios';
 import { jokes } from "../models/Joke";
 import axios from "axios";
-
 export function fetchJokes(): Promise<jokes[]> {
   const apiKey = process.env.TRIVIA_API_KEY as string;
   return axios
