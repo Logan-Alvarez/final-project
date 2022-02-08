@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
+import { IceBreakers } from "../models/Icebreakers";
 import { jokes } from "../models/Joke";
+import { getFavIcebreakers } from "../services/icebreaker-api";
 import { fetchFavoriteJokes } from "../services/joke-api";
 import IcebreakerFavorites from "./IcebreakerFavorites";
 import FavoritesList from "./IcebreakerFavorites";
 import JokeFavorites from "./JokeFavorites";
 import TriviaFavorites from "./TriviaFavorites";
 
-function Favorites(){
-    const [icebreakers, setIcebreakers] = useState([]);
-    const [jokes, setJokes] = useState<jokes[]>([]);
-    const [trivia, setTrivia] = useState([]);
+function Favorites() {
+  const [icebreakers, setIcebreakers] = useState<IceBreakers[]>([]);
+  const [jokes, setJokes] = useState<jokes[]>([]);
+  const [trivia, setTrivia] = useState([]);
 
-    useEffect(() => {
-        fetchFavoriteJokes().then((data) => setJokes(data));
-        //getFavIcebreakers().then((data) => setIcebreakers(data));
-        //fetchFavoriteTrivia().then((data) => setTrivia(data));
-    }, [])
+  useEffect(() => {
+    fetchFavoriteJokes().then((data) => setJokes(data));
+    //getFavIcebreakers().then((data) => setIcebreakers(data));
+    //fetchFavoriteTrivia().then((data) => setTrivia(data));
+  }, []);
 
     return (
         <div className="Favorites">
@@ -28,6 +30,7 @@ function Favorites(){
             <a href="/">Back To Home</a>
         </div>
     )
+
 }
 
 export default Favorites;

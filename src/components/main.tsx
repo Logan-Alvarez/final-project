@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
-import logo from "../logo.gif";
-
+import SS from "../images/SS.gif";
 const Main = () => {
   return (
     <div className="Main">
       <header>
         {/* <h1>Logo</h1> */}
-        <img src={logo} alt="Logo" className="Logo" />
+        {/* <img src={logo} alt="Logo" className="Logo" /> */}
         <Link to={"/Favorites"}>
-        <div className="feature-container" >Favorites</div>
+          <div className="feature-container">Favorites</div>
         </Link>
       </header>
+
+      <header>{/* <img src={SS} alt="Logo" className="Logo" /> */}</header>
+
       <div className="tool-container">
         <Link to={"/Trivia"}>
           <div className="feature-container">

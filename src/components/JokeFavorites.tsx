@@ -1,10 +1,11 @@
-import {jokes} from '../models/Joke';
-import { postFavoriteJokes } from '../services/joke-api';
-import SingleJoke from './SingleJoke';
+import { jokes } from "../models/Joke";
+import { postFavoriteJokes } from "../services/joke-api";
+import SingleJoke from "./SingleJoke";
 
 interface Prop {
-    jokes: jokes[];
+  jokes: jokes[];
 }
+
 function JokeFavorites({jokes}: Prop) {
 
 
