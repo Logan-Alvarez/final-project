@@ -19,8 +19,9 @@ function IcebreakerForm({onSubmit}: Props) {
     return (
         <div className="IcebreakerForm">
             <form onSubmit={handleFormSubmit}>
-                <label htmlFor="category">Search by category</label>
+                <label htmlFor="category">Search by Category</label>
                <select name="category" id="category" onChange={e => setCategory(e.target.value)}>
+                   <option value="">Select a Category</option>
                    <option value="Funny">Funny</option>
                    <option value="Travel">Travel</option>
                    <option value="Animal">Animal</option>

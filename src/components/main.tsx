@@ -7,6 +7,9 @@ const Main = () => {
       <header>
         {/* <h1>Logo</h1> */}
         <img src={logo} alt="Logo" className="Logo" />
+        <Link to={"/Favorites"}>
+        <div className="feature-container" >Favorites</div>
+        </Link>
       </header>
       <div className="tool-container">
         <Link to={"/Trivia"}>

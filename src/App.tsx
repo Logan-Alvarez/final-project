@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Icebreakers } from "./components/Icebreakers";
 import { Trivia } from "./components/Trivia";
 import { Jokes } from "./components/Jokes";
+import Favorites from "./components/Favorites";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/Favorites" element={<Favorites />}></Route>
           <Route path="/icebreakers" element={<Icebreakers />} />
           <Route path="/Trivia" element={<Trivia />} />
           <Route path="/Jokes" element={<Jokes />} />
