@@ -25,6 +25,7 @@ function Favorites(){
                 <JokeFavorites jokes={jokes}/>
                 <TriviaFavorites />
             </div>
+            <a href="/">Back To Home</a>
         </div>
     )
 }

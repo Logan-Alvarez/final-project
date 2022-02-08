@@ -11,12 +11,15 @@ function JokeFavorites({jokes}: Prop) {
     return (
         <div className="JokeFavorites">
             
-           {jokes.map((joke, i)=> {
+           { jokes ?
+           jokes.map((joke, i)=> {
                <div>
                     <h3>{joke.setup}</h3>
                     <h4>{joke.punchline}</h4>
                </div>
-           })}
+           }) :
+           <span>no jokes</span>
+           }
         </div>
     )
 }
