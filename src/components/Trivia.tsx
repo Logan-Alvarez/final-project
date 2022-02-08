@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Data from "../models/Trivia";
 import { fetchTrivia } from "../services/trivia-api";
 import TriviaForm from "./TriviaForm";
+import { TriviaList } from "./TriviaList";
 
 export function Trivia() {
   //HOOK
@@ -25,6 +26,7 @@ export function Trivia() {
     <div className="Trivia">
       <h1>Trivia</h1>
       <TriviaForm onSubmit={handleOnSubmit} />
+      <TriviaList trivias={trivia} />
       <a href="/">Back To Home</a>
       <button onClick={NewQuestion}>Next Question</button>
     </div>
