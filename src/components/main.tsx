@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
-import glow from "../images/glow.gif";
+import SS from "../images/SS.gif";
 const Main = () => {
   return (
     <div className="Main">
-      <header>
-        {/* <h1 className="title">Social Spark</h1> */}
-        {/* <img src={glow} alt="Logo" className="Logo" /> */}
-      </header>
+      <header>{/* <img src={SS} alt="Logo" className="Logo" /> */}</header>
       <div className="tool-container">
         <Link to={"/Trivia"}>
           <div className="feature-container">
