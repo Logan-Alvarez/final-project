@@ -45,17 +45,11 @@ a:link {
   color: var(--header-color);
 }
 
-
-.Logo {
-  width: 100px;
-}
-
 /* ICE BREAKER */
 
-.IcebreakerForm form{
+.IcebreakerForm form {
   display: flex;
   flex-direction: column;
   width: 50%;
   text-align: center;
 }
-
