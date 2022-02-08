@@ -12,3 +12,16 @@ export function fetchJokes(): Promise<jokes[]> {
     })
     .then((res) => res.data.body);
 }
+
+export function fetchFavoriteJokes(): Promise<jokes[]> {
+    
+    return axios
+      .get("http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favorites")
+      .then((res) => res.data.body);
+}
+
+export function postFavoriteJokes(joke: jokes): Promise<jokes> {
+    return axios
+    .post<jokes>("http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favorites", joke)
+    .then((res) => res.data);
+}
