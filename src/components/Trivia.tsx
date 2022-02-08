@@ -6,7 +6,7 @@ import { TriviaList } from "./TriviaList";
 
 export function Trivia() {
   //HOOK
-  const [trivia, setTrivia] = useState<Data[]>([]);
+  const [trivias, setTrivia] = useState<Data[]>([]);
   const [category, setCategory] = useState<string>("");
 
   useEffect(() => {
@@ -28,6 +28,7 @@ export function Trivia() {
       <TriviaForm onSubmit={handleOnSubmit} />
       <TriviaList trivias={trivia} />
       <a href="/">Back To Home</a>
+      <TriviaList trivias={trivias} />
       <button onClick={NewQuestion}>Next Question</button>
     </div>
   );
