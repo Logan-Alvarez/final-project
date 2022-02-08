@@ -1,10 +1,8 @@
 export default interface Data {
- 
-    category: string;
-    question: string;
-    answer: string;
+  category: string;
+  question: string;
+  answer: string;
 }
-
 
 // export default interface TriviaResponse {
 //     data: Data[]
