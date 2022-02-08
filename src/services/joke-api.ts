@@ -14,14 +14,18 @@ export function fetchJokes(): Promise<jokes[]> {
 }
 
 export function fetchFavoriteJokes(): Promise<jokes[]> {
-    
-    return axios
-      .get("http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favorites")
-      .then((res) => res.data.body);
+  return axios
+    .get(
+      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes"
+    )
+    .then((res) => res.data.body);
 }
 
 export function postFavoriteJokes(joke: jokes): Promise<jokes> {
-    return axios
-    .post<jokes>("http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favorites", joke)
+  return axios
+    .post<jokes>(
+      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes",
+      joke
+    )
     .then((res) => res.data);
 }
