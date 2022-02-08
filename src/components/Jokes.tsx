@@ -12,11 +12,16 @@ export function Jokes() {
     fetchJokes().then((data) => setJoke(data));
   }, []);
 
+  function newJoke() {
+    fetchJokes().then((data) => setJoke(data));
+  }
+
   console.log(jokes);
   return (
     <div className="Jokes">
       <h1>Big boy Jokes</h1>
       <JokesList jokes={jokes} />
+      <button onClick={newJoke}>Next</button>
     </div>
   );
 }
