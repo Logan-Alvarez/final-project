@@ -9,5 +9,5 @@ export function fetchTrivia(category: string): Promise<Trivia[]> {
         "X-Api-Key": "k0oavaV3QHHSU6dHS42jPw==brteR2986ZEA5ZGN",
       },
     })
-    .then((res) => res.data[0]);
+    .then((res) => res.data);
 }
