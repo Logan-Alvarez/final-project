@@ -19,16 +19,18 @@ function Favorites() {
     //fetchFavoriteTrivia().then((data) => setTrivia(data));
   }, []);
 
-  return (
-    <div className="Favorites">
-      <h1>Favorites</h1>
-      <div className="favoritesContainer">
-        {/* <IcebreakerFavorites icebreakers={icebreakers} /> */}
-        <JokeFavorites jokes={jokes} />
-        <TriviaFavorites />
-      </div>
-    </div>
-  );
+    return (
+        <div className="Favorites">
+            <h1>Favorites</h1>
+            <div className="favoritesContainer">
+                <IcebreakerFavorites />
+                <JokeFavorites jokes={jokes}/>
+                <TriviaFavorites />
+            </div>
+            <a href="/">Back To Home</a>
+        </div>
+    )
+
 }
 
 export default Favorites;
