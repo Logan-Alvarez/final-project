@@ -1,4 +1,4 @@
-import { IceBreakers } from "../models/Icebreakers";
+import { IceBreakers } from "../../models/Icebreakers";
 import { Breaker } from "./Breaker";
 
 interface Prop {

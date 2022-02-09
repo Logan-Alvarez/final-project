@@ -1,9 +1,6 @@
 body {
-  background-image: url(images/light3.jpg);
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
-  /* position: absolute; */
+  background-image: linear-gradient(to right, rgb(93, 0, 129), blue);
+  margin: 0;
 }
 
 :root {
@@ -22,14 +19,10 @@ html {
 .App {
   height: 100%;
 }
-/* body {
-  height: 100%;
-  margin: 0;
-  background-color: var(--primary-color);
-} */
 
-a:link {
+a {
   text-decoration: none;
+  color: black;
 }
 
 /* MAIN PAGE */
@@ -47,11 +40,11 @@ a:link {
 .feature-container {
   text-align: center;
   /* background-color: var(--secondary-color); */
-  background: rgba(255, 165, 0, 0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .tool-container h2 {
-  color: white;
+  color: black;
 }
 
 /* ICE BREAKER */
@@ -61,4 +54,13 @@ a:link {
   flex-direction: column;
   width: 50%;
   text-align: center;
+}
+
+.FavButton {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  /* text-shadow: 2px 2px 3px black, 0 0 25px blue, 0 0 5px darkblue; */
+  color: white;
+  background-color: black;
 }

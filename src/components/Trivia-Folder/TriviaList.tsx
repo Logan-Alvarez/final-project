@@ -1,5 +1,5 @@
-import Data from "../models/Trivia";
-import SingleTrivia from "./SingleTrivia";
+import Data from "../../models/Trivia";
+import SingleTrivia from "../Trivia-Folder/SingleTrivia";
 
 interface Prop {
   trivias: Data[];
