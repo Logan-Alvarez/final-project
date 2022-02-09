@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Data from "../../models/Trivia";
-import { fetchTrivia } from "../../services/trivia-api";
+import { fetchTrivia } from "../../models/trivia-api";
 import TriviaForm from "./TriviaForm";
 import { TriviaList } from "./TriviaList";
 
