@@ -1,3 +1,5 @@
+import { ObjectId } from "mongodb";
+
 interface JokeResponse {
   data: jokes[];
 }
