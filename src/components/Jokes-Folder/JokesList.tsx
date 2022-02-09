@@ -1,5 +1,5 @@
-import { jokes } from "../models/Joke";
-import SingleJoke from "./SingleJoke";
+import { jokes } from "../../models/Joke";
+import SingleJoke from "../Jokes-Folder/SingleJoke";
 
 interface Prop {
   jokes: jokes[];

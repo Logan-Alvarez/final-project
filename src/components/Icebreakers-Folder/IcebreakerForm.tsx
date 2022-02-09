@@ -1,6 +1,6 @@
 import e from "express";
 import { FormEvent, useState } from "react";
-import { IceBreakers } from "../models/Icebreakers";
+import { IceBreakers } from "../../models/Icebreakers";
 
 interface Props {
   onSubmit: (category: string) => void;

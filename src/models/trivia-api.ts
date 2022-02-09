@@ -1,5 +1,6 @@
 import axios from "axios";
-import Trivia from "../models/Trivia";
+import Data from "./Trivia";
+import Trivia from "./Trivia";
 
 export function fetchTrivia(category: string): Promise<Trivia[]> {
   //const apiKey = process.env.TRIVIA_API_KEY as string;
