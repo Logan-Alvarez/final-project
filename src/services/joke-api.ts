@@ -18,7 +18,7 @@ export function fetchFavoriteJokes(): Promise<jokes[]> {
     .get(
       "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes"
     )
-    .then((res) => res.data.body);
+    .then((res) => res.data);
 }
 
 export function postFavoriteJokes(joke: jokes): Promise<jokes> {
