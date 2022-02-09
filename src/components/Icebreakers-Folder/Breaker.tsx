@@ -1,5 +1,5 @@
-import { IceBreakers } from "../models/Icebreakers";
-import { postFavIcebreakers } from "../services/icebreaker-api";
+import { IceBreakers } from "../../models/Icebreakers";
+import { postFavIcebreakers } from "../../services/icebreaker-api";
 
 interface Prop {
   icebreaker: IceBreakers;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { jokes } from "../models/Joke";
-import { fetchJokes } from "../services/joke-api";
+import { jokes } from "../../models/Joke";
+import { fetchJokes } from "../../services/joke-api";
 import { JokesList } from "./JokesList";
 
 export function Jokes() {

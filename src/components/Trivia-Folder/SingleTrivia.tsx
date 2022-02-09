@@ -1,4 +1,4 @@
-import Data from "../models/Trivia";
+import Data from "../../models/Trivia";
 
 interface Prop {
   trivia: Data;

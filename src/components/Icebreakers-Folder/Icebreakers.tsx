@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getIceBreakers } from "../services/icebreaker-api";
-import { IceBreakers } from "../models/Icebreakers";
+import { getIceBreakers } from "../../services/icebreaker-api";
+import { IceBreakers } from "../../models/Icebreakers";
 import { IcebreakerList } from "./IcebreakerList";
 import IcebreakerForm from "./IcebreakerForm";
 
