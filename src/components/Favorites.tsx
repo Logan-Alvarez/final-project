@@ -15,22 +15,21 @@ function Favorites() {
 
   useEffect(() => {
     fetchFavoriteJokes().then((data) => setJokes(data));
-    //getFavIcebreakers().then((data) => setIcebreakers(data));
+    getFavIcebreakers().then((data) => setIcebreakers(data));
     //fetchFavoriteTrivia().then((data) => setTrivia(data));
   }, []);
 
-    return (
-        <div className="Favorites">
-            <h1>Favorites</h1>
-            <div className="favoritesContainer">
-                <IcebreakerFavorites />
-                <JokeFavorites jokes={jokes}/>
-                <TriviaFavorites />
-            </div>
-            <a href="/">Back To Home</a>
-        </div>
-    )
-
+  return (
+    <div className="Favorites">
+      <h1>Favorites</h1>
+      <div className="favoritesContainer">
+        <IcebreakerFavorites icebreakers={icebreakers} />
+        <JokeFavorites jokes={jokes} />
+        <TriviaFavorites />
+      </div>
+      <a href="/">Back To Home</a>
+    </div>
+  );
 }
 
 export default Favorites;

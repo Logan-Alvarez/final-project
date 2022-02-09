@@ -6,23 +6,17 @@ interface Prop {
   jokes: jokes[];
 }
 
-function JokeFavorites({jokes}: Prop) {
-
-
-    return (
-        <div className="JokeFavorites">
-            
-           { jokes ?
-           jokes.map((joke, i)=> {
-               <div>
-                    <h3>{joke.setup}</h3>
-                    <h4>{joke.punchline}</h4>
-               </div>
-           }) :
-           <span>no jokes</span>
-           }
+function JokeFavorites({ jokes }: Prop) {
+  return (
+    <div className="JokeFavorites">
+      {jokes.map((joke, i) => (
+        <div key={i}>
+          <h1>{joke.setup}</h1>
+          <h2>{joke.punchline}</h2>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
 
 export default JokeFavorites;
