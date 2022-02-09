@@ -1,6 +1,7 @@
 //import axios from 'axios';
 import { jokes } from "../models/Joke";
 import axios from "axios";
+import { ObjectId } from "mongodb";
 export function fetchJokes(): Promise<jokes[]> {
   //const apiKey = process.env.TRIVIA_API_KEY as string;
   return axios
@@ -26,6 +27,14 @@ export function postFavoriteJokes(joke: jokes): Promise<jokes> {
     .post<jokes>(
       "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes",
       joke
+    )
+    .then((res) => res.data);
+}
+
+export function deleteFavoriteJoke(_id: ObjectId): Promise<jokes> {
+  return axios
+    .delete(
+      `http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes/${_id}`
     )
     .then((res) => res.data);
 }

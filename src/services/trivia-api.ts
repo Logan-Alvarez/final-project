@@ -1,4 +1,5 @@
 import axios from "axios";
+import { ObjectId } from "mongodb";
 import Trivia from "../models/Trivia";
 
 export function fetchTrivia(category: string): Promise<Trivia[]> {
@@ -25,6 +26,14 @@ export function postFavTrivia(favtrivia: Trivia): Promise<Trivia> {
     .post(
       "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favtrivia",
       favtrivia
+    )
+    .then((res) => res.data);
+}
+
+export function deleteFavTrivia(_id: ObjectId): Promise<Trivia> {
+  return axios
+    .delete(
+      `http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favtrivia/${_id}`
     )
     .then((res) => res.data);
 }
