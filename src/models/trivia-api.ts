@@ -13,6 +13,19 @@ export function fetchTrivia(category: string): Promise<Trivia[]> {
     .then((res) => res.data);
 }
 
-// export function fetchFavoriteTrivia(): Promise<Data[]> {
-//   return axios.get();
-// }
+export function getFavTrivia(): Promise<Trivia[]> {
+  return axios
+    .get(
+      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favtrivia"
+    )
+    .then((res) => res.data);
+}
+
+export function postFavTrivia(favtrivia: Trivia): Promise<Trivia> {
+  return axios
+    .post(
+      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favtrivia",
+      favtrivia
+    )
+    .then((res) => res.data);
+}
