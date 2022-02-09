@@ -21,7 +21,7 @@ function Favorites() {
     <div className="Favorites">
       <h1>Favorites</h1>
       <div className="favoritesContainer">
-        <IcebreakerFavorites />
+        <IcebreakerFavorites icebreakers={icebreakers} />
         <JokeFavorites jokes={jokes} />
         <TriviaFavorites />
       </div>
