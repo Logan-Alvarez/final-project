@@ -21,7 +21,12 @@ function Favorites() {
     getFavTrivia().then((data) => setTrivia(data));
   }, []);
 
-  console.log(jokes);
+  function handleOnSubmit(index: number) {
+    setIcebreakers((prev) => [
+      ...prev.slice(0, index),
+      ...prev.slice(index + 1),
+    ]);
+  }
 
   return (
     <div className="Favorites">
@@ -30,7 +35,10 @@ function Favorites() {
         Back To Home
       </a>
       <div className="favoritesContainer">
-        <IcebreakerFavorites icebreakers={icebreakers} />
+        <IcebreakerFavorites
+          onSubmit={handleOnSubmit}
+          icebreakers={icebreakers}
+        />
         <JokeFavorites jokes={jokes} />
         <TriviaFavorites trivias={trivias} />
       </div>
