@@ -41,9 +41,9 @@ a {
 
 .feature-container {
   text-align: center;
-  /* background-color: var(--secondary-color); */
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  width: 270px;
 }
 .feature-container p {
   margin-top: 0px;
@@ -53,10 +53,7 @@ a {
   padding-top: 5px;
 }
 
-  background: rgb(255, 255, 255);
-  border-radius: 8px;
-  width: 270px;
-}
+
 
 .feature-container:hover {
   box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgb(93, 0, 129);
@@ -106,7 +103,7 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
-
+}
 .smallButton:hover {
   box-shadow: 0 12px 16px 0 rgb(255, 255, 255),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
