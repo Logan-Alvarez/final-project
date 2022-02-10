@@ -20,16 +20,9 @@ function IcebreakerFavorites({ icebreakers, onSubmit }: Prop) {
       {icebreakers.map((icebreaker, i) => (
         <div className="IcebreakerFavorites" key={i}>
           <h1>{icebreaker.question}</h1>
-
-          <button className="smallButton" onClick={(e) => removeFavorite(i)}>
-            {" "}
-            Remove
-          </button>
-
           <form onSubmit={(e) => removeFavorite(i, e)}>
             <button className="smallButton">- Favorites</button>
           </form>
-
         </div>
       ))}
     </div>
