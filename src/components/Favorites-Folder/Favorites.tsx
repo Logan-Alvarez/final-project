@@ -21,13 +21,18 @@ function Favorites() {
     getFavTrivia().then((data) => setTrivia(data));
   }, []);
 
-  function handleOnSubmit(index: number) {
+  function handleOnSubmitIcebreakers(index: number) {
     setIcebreakers((prev) => [
       ...prev.slice(0, index),
       ...prev.slice(index + 1),
     ]);
   }
-
+  function handleOnSubmitTrivia(index: number) {
+    setTrivia((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
+  }
+  function handleOnSubmitJokes(index: number) {
+    setJokes((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
+  }
   return (
     <div className="Favorites">
       <h1>Favorites</h1>
@@ -36,11 +41,11 @@ function Favorites() {
       </a>
       <div className="favoritesContainer">
         <IcebreakerFavorites
-          onSubmit={handleOnSubmit}
+          onSubmit={handleOnSubmitIcebreakers}
           icebreakers={icebreakers}
         />
-        <JokeFavorites jokes={jokes} />
-        <TriviaFavorites trivias={trivias} />
+        <JokeFavorites onSubmit={handleOnSubmitJokes} jokes={jokes} />
+        <TriviaFavorites onSubmit={handleOnSubmitTrivia} trivias={trivias} />
       </div>
     </div>
   );
