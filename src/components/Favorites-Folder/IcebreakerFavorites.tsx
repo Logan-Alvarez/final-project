@@ -24,4 +24,6 @@ function IcebreakerFavorites({ icebreakers }: Prop) {
     </div>
   );
 }
+
 export default IcebreakerFavorites;
+

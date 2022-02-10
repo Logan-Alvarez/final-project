@@ -24,11 +24,21 @@ export function Trivia() {
 
   return (
     <div className="Trivia">
-      <h1>Trivia</h1>
+      <div>
+        <h1>Trivia</h1>
+        <a href="/">Back To Home</a>
+      </div>
       <TriviaForm onSubmit={handleOnSubmit} />
-      <a href="/">Back To Home</a>
+
       <TriviaList trivias={trivias} />
-      <button onClick={NewQuestion}>Next Question</button>
+      <a className="Home" href="/">
+        Back To Home
+      </a>
+
+      <button onClick={NewQuestion} className="smallButton">
+        Next Question
+      </button>
+
     </div>
   );
 }

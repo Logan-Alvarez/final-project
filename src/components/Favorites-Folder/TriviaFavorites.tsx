@@ -1,6 +1,8 @@
 import { ObjectId } from "mongodb";
 import data from "../../models/Trivia";
 import { deleteFavTrivia } from "../../services/trivia-api";
+import { postFavTrivia } from "../../services/trivia-api";
+import SingleTrivia from "../Trivia-Folder/SingleTrivia";
 
 interface Prop {
   trivias: data[];

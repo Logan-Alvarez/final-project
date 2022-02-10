@@ -15,7 +15,9 @@ function SingleJoke({ joke }: Prop) {
       <h1>Single Joke</h1>
       <h3>{joke.setup}</h3>
       <h4>{joke.punchline}</h4>
-      <button onClick={handleFavorite}>+ Favorites</button>
+      <button onClick={handleFavorite} className="smallButton">
+        Add To Favorites
+      </button>
     </div>
   );
 }

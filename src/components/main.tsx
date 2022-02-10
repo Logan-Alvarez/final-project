@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-// import mean from "../images/mean.gif";
+import social from "../images/social.gif";
 const Main = () => {
   return (
     <div className="Main">
       <header>
-        {/* <img src={mean} alt="Logo" className="Logo" /> */}
+        {/* <img src={social} alt="Logo" className="Logo" /> */}
         <Link to={"/Favorites"}>
-          <button className="feature-container FavButton">Favorites</button>
+          <button className="smallButton">Favorites</button>
         </Link>
       </header>
 

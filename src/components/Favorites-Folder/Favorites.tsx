@@ -26,6 +26,9 @@ function Favorites() {
   return (
     <div className="Favorites">
       <h1>Favorites</h1>
+      <a className="Home" href="/">
+        Back To Home
+      </a>
       <div className="favoritesContainer">
         <IcebreakerFavorites icebreakers={icebreakers} />
         <JokeFavorites jokes={jokes} />

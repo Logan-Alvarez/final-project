@@ -17,7 +17,7 @@ function IcebreakerForm({ onSubmit }: Props) {
 
   return (
     <div className="IcebreakerForm">
-      <form onSubmit={handleFormSubmit}>
+      <form className="IcebreakerForm" onSubmit={handleFormSubmit}>
         <label htmlFor="category">Search by Category</label>
         <select
           name="category"
@@ -38,7 +38,9 @@ function IcebreakerForm({ onSubmit }: Props) {
           <option value="Reflective">Reflective</option>
           <option value="Work">Work</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" className="smallButton">
+          Submit
+        </button>
       </form>
     </div>
   );

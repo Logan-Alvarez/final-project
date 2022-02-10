@@ -13,6 +13,8 @@ function JokeFavorites({ jokes }: Prop) {
 
   return (
     <div className="JokeFavorites">
+      
+      <div>
       {jokes.map((joke, i) => {
         <div key={i}>
           <h3>{joke.setup}</h3>
@@ -22,6 +24,7 @@ function JokeFavorites({ jokes }: Prop) {
           </button>
         </div>;
       })}
+      </div>
     </div>
   );
 }
