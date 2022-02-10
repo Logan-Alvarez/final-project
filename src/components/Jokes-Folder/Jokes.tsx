@@ -7,7 +7,7 @@ export function Jokes() {
   //HOOKS
   const [jokes, setJoke] = useState<jokes[]>([]);
 
-  //JOKE useEffect.
+  // JOKE useEffect.
   // useEffect(() => {
   //   fetchJokes().then((data) => setJoke(data));
   // }, []);
