@@ -9,13 +9,12 @@ interface Prop {
 function TriviaFavorites({ trivias }: Prop) {
   return (
     <div className="TriviaFavorites">
-      {trivias.map((trivia, i) => {
-        <div>
-          <h2>{trivia.category}</h2>
-          <h3>{trivia.question}</h3>
+      {trivias.map((trivia, i) => (
+        <div key={i}>
+          <h1>{trivia.question}</h1>
           <h4>{trivia.answer}</h4>
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 }
