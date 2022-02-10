@@ -26,7 +26,6 @@ export function Trivia() {
     <div className="Trivia">
       <div>
         <h1>Trivia</h1>
-        <a href="/">Back To Home</a>
       </div>
       <TriviaForm onSubmit={handleOnSubmit} />
 
@@ -38,7 +37,6 @@ export function Trivia() {
       <button onClick={NewQuestion} className="smallButton">
         Next Question
       </button>
-
     </div>
   );
 }

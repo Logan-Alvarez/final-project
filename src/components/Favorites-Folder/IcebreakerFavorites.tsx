@@ -12,11 +12,14 @@ function IcebreakerFavorites({ icebreakers }: Prop) {
     deleteFavIcebreakers(foundId);
   }
   return (
-    <div className="IcebreakerFavorites">
+    <div>
       {icebreakers.map((icebreaker, i) => (
-        <div key={i}>
+        <div className="IcebreakerFavorites" key={i}>
           <h1>{icebreaker.question}</h1>
-          <button onClick={(e) => removeFavorite(i)}> - Favorites</button>
+          <button className="smallButton" onClick={(e) => removeFavorite(i)}>
+            {" "}
+            Remove
+          </button>
         </div>
       ))}
     </div>
@@ -24,4 +27,3 @@ function IcebreakerFavorites({ icebreakers }: Prop) {
 }
 
 export default IcebreakerFavorites;
-
