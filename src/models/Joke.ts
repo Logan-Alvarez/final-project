@@ -5,7 +5,7 @@ interface JokeResponse {
 }
 
 export interface jokes {
-  _id?: string;
+  _id?: ObjectId;
   type: string;
   setup: string;
   punchline: string;
