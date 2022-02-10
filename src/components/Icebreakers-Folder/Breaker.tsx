@@ -3,9 +3,10 @@ import { postFavIcebreakers } from "../../services/icebreaker-api";
 
 interface Prop {
   icebreaker: IceBreakers;
+  //display: boolean;
 }
 
-export function Breaker({ icebreaker }: Prop) {
+export function Breaker({ icebreaker}: Prop) {
   function addToFavorites() {
     postFavIcebreakers(icebreaker);
   }

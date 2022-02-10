@@ -24,7 +24,10 @@ export function Trivia() {
 
   return (
     <div className="Trivia">
-      <h1>Trivia</h1>
+      <div>
+        <h1>Trivia</h1>
+        <a href="/">Back To Home</a>
+      </div>
       <TriviaForm onSubmit={handleOnSubmit} />
 
       <TriviaList trivias={trivias} />
