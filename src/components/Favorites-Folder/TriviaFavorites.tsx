@@ -1,4 +1,6 @@
 import data from "../../models/Trivia";
+import { postFavTrivia } from "../../services/trivia-api";
+import SingleTrivia from "../Trivia-Folder/SingleTrivia";
 
 interface Prop {
   trivias: data[];

@@ -14,7 +14,9 @@ export function Icebreakers() {
   }, []);
   // console.log(icebreakers); - RETURNED ARRAY
   function handleIcebreakerSubmit(category: string) {
-    let newArray: IceBreakers[] = icebreakers.filter(icebreaker => icebreaker.category === category);
+    let newArray: IceBreakers[] = icebreakers.filter(
+      (icebreaker) => icebreaker.category === category
+    );
     setIcebreaker(newArray);
   }
 
@@ -22,7 +24,9 @@ export function Icebreakers() {
     <div className="Icebreakers">
       <h1>Icebreakers</h1>
       <div>
-        <a href="/">Back To Home</a>
+        <a className="Home" href="/">
+          Back To Home
+        </a>
       </div>
       <IcebreakerForm onSubmit={handleIcebreakerSubmit} />
       <IcebreakerList icebreakers={icebreakers} />

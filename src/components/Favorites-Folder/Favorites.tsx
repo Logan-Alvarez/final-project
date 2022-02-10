@@ -15,6 +15,7 @@ function Favorites() {
   const [jokes, setJokes] = useState<jokes[]>([]);
   const [trivias, setTrivia] = useState<Data[]>([]);
 
+
   useEffect(() => {
     fetchFavoriteJokes().then((data) => setJokes(data));
     getFavIcebreakers().then((data) => setIcebreakers(data));
@@ -26,6 +27,9 @@ function Favorites() {
   return (
     <div className="Favorites">
       <h1>Favorites</h1>
+      <a className="Home" href="/">
+        Back To Home
+      </a>
       <div className="favoritesContainer">
         <IcebreakerFavorites icebreakers={icebreakers} />
         <JokeFavorites jokes={jokes} />

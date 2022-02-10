@@ -1,4 +1,5 @@
 import axios from "axios";
+import Data from "../models/Trivia";
 import { ObjectId } from "mongodb";
 import Trivia from "../models/Trivia";
 
@@ -37,3 +38,4 @@ export function deleteFavTrivia(_id: ObjectId): Promise<Trivia> {
     )
     .then((res) => res.data);
 }
+
