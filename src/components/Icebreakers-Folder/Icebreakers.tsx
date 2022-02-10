@@ -17,8 +17,11 @@ export function Icebreakers() {
   }, []);
   // console.log(icebreakers); - RETURNED ARRAY
   function handleIcebreakerSubmit(category: string) {
+
     if(count === 0){
-    let newArray: IceBreakers[] = icebreakers.filter(icebreaker => icebreaker.category === category);
+    let newArray: IceBreakers[] = icebreakers.filter(
+      (icebreaker) => icebreaker.category === category
+    );
     setIcebreaker(newArray);
     // setIcebreaker(allIcebreakers);
     setCategory(category);
@@ -43,8 +46,9 @@ export function Icebreakers() {
   return (
     <div className="Icebreakers">
       <div>
-      <h1>Icebreakers</h1>
-        <a href="/">Back To Home</a>
+        <a className="Home" href="/">
+          Back To Home
+        </a>
       </div>
       <IcebreakerForm onSubmit={handleIcebreakerSubmit} />
       { category.length > 0 ?

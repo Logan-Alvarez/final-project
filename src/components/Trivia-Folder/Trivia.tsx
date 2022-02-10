@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Data from "../../models/Trivia";
-import { fetchTrivia } from "../../models/trivia-api";
+import { fetchTrivia } from "../../services/trivia-api";
 import TriviaForm from "./TriviaForm";
 import { TriviaList } from "./TriviaList";
 
@@ -29,9 +29,16 @@ export function Trivia() {
         <a href="/">Back To Home</a>
       </div>
       <TriviaForm onSubmit={handleOnSubmit} />
-      
+
       <TriviaList trivias={trivias} />
-      <button onClick={NewQuestion}>Next Question</button>
+      <a className="Home" href="/">
+        Back To Home
+      </a>
+
+      <button onClick={NewQuestion} className="smallButton">
+        Next Question
+      </button>
+
     </div>
   );
 }

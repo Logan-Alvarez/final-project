@@ -13,7 +13,7 @@ import TriviaFavorites from "./TriviaFavorites";
 function Favorites() {
   const [icebreakers, setIcebreakers] = useState<IceBreakers[]>([]);
   const [jokes, setJokes] = useState<jokes[]>([]);
-  const [trivia, setTrivia] = useState<Data[]>([]);
+  const [trivias, setTrivia] = useState<Data[]>([]);
 
   useEffect(() => {
     fetchFavoriteJokes().then((data) => setJokes(data));
@@ -21,14 +21,18 @@ function Favorites() {
     getFavTrivia().then((data) => setTrivia(data));
   }, []);
 
+  console.log(jokes);
+
   return (
     <div className="Favorites">
       <h1>Favorites</h1>
-      <a href="/">Back To Home</a>
+      <a className="Home" href="/">
+        Back To Home
+      </a>
       <div className="favoritesContainer">
         <IcebreakerFavorites icebreakers={icebreakers} />
         <JokeFavorites jokes={jokes} />
-        <TriviaFavorites />
+        <TriviaFavorites trivias={trivias} />
       </div>
     </div>
   );
