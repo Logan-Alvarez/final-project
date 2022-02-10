@@ -16,7 +16,9 @@ function IcebreakerFavorites({ icebreakers }: Prop) {
       {icebreakers.map((icebreaker, i) => (
         <div key={i}>
           <h1>{icebreaker.question}</h1>
-          <button onClick={(e) => removeFavorite(i)}> - Favorites</button>
+          <button className="smallButton" onClick={(e) => removeFavorite(i)}>
+            - Favorites
+          </button>
         </div>
       ))}
     </div>
