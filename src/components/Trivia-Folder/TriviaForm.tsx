@@ -38,7 +38,9 @@ function TriviaForm({ onSubmit }: Prop) {
           <option value="religionmythology">Religion</option>
           <option value="sports">Sports</option>
         </select>
-        <button type="submit">Go</button>
+        <button type="submit" className="smallButton">
+          Go
+        </button>
       </form>
     </div>
   );

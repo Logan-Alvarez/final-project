@@ -26,9 +26,16 @@ export function Trivia() {
     <div className="Trivia">
       <h1>Trivia</h1>
       <TriviaForm onSubmit={handleOnSubmit} />
-      <a href="/">Back To Home</a>
+
       <TriviaList trivias={trivias} />
-      <button onClick={NewQuestion}>Next Question</button>
+      <a className="Home" href="/">
+        Back To Home
+      </a>
+
+      <button onClick={NewQuestion} className="smallButton">
+        Next Question
+      </button>
+
     </div>
   );
 }
