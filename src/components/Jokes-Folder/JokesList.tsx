@@ -7,7 +7,6 @@ interface Prop {
 export function JokesList({ jokes }: Prop) {
   return (
     <div>
-      <h3>Jokes my guy</h3>
       <a className="Home" href="/">
         Back To Home
       </a>
