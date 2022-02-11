@@ -22,16 +22,18 @@ function SingleTrivia({ trivia }: Prop) {
   }
 
   return (
-    <div>
-      <h1>Single Trivia</h1>
-      <h3>{trivia.question}</h3>
+    <div className="singleTrivia">
+      <h1>Trivia Question:</h1>
+      <h3 className="triviaA">{trivia.question}</h3>
       {hide ? (
-        <h3 onClick={toggle}>{trivia.answer}</h3>
+        <h3 className="triviaA" onClick={toggle}>
+          {trivia.answer}
+        </h3>
       ) : (
         <div onClick={toggle}>Click for Answer</div>
       )}
       <button className="smallButton" onClick={addToFavorites}>
-        + Favorties
+        Add To Favorites
       </button>
     </div>
   );
