@@ -41,9 +41,7 @@ a {
 
 .feature-container {
   text-align: center;
-
   background: rgba(255, 255, 255, 0.5);
-
   border-radius: 8px;
   width: 270px;
 }
@@ -54,6 +52,7 @@ a {
 .feature-container h2 {
   padding-top: 5px;
 }
+
 
 .feature-container:hover {
   box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgb(93, 0, 129);
