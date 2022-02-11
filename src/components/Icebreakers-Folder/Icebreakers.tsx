@@ -22,18 +22,20 @@ export function Icebreakers() {
   }, []);
   // console.log(icebreakers); - RETURNED ARRAY
   function handleIcebreakerSubmit(category: string) {
-
-    if(count === 0){
+    if (count === 0) {
       let icebreakerArray = allIcebreakers;
       let newArray: IceBreakers[] = icebreakerArray.filter(
-      (icebreaker) => icebreaker.category === category);
+        (icebreaker) => icebreaker.category === category
+      );
       setIcebreaker(newArray);
       setCategory(category);
       setCount(1);
     } else {
       let icebreakerArray = allIcebreakers;
       setCount(0);
-      let newArray: IceBreakers[] = icebreakerArray.filter(icebreaker => icebreaker.category === category);
+      let newArray: IceBreakers[] = icebreakerArray.filter(
+        (icebreaker) => icebreaker.category === category
+      );
 
       setIcebreaker(newArray);
       setCategory(category);
