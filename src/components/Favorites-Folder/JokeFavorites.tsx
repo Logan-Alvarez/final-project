@@ -12,7 +12,7 @@ function JokeFavorites({ jokes, onSubmit }: Prop) {
   function removeFavorite(index: number, e: FormEvent) {
     e.preventDefault();
     let foundId = jokes[index]._id as ObjectId;
-    deleteFavTrivia(foundId);
+    deleteFavoriteJoke(foundId);
     onSubmit(index);
   }
 
