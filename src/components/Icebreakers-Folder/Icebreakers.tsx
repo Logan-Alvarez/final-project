@@ -10,6 +10,7 @@ export function Icebreakers() {
   const [allIcebreakers, setAllIcebreakers] = useState<IceBreakers[]>([]);
   const [category, setCategory] = useState("");
   const [count, setCount] = useState(0);
+  const [filterFirst, setFilterFirst] = useState(true);
   //ICEBREAKER useEffect.
   useEffect(() => {
     getIceBreakers().then((data) => setIcebreaker(data));
@@ -17,27 +18,19 @@ export function Icebreakers() {
   }, []);
   // console.log(icebreakers); - RETURNED ARRAY
   function handleIcebreakerSubmit(category: string) {
-    if (count === 0) {
-      let newArray: IceBreakers[] = icebreakers.filter(
-        (icebreaker) => icebreaker.category === category
-      );
+
+    if(count === 0){
+      let icebreakerArray = allIcebreakers;
+      let newArray: IceBreakers[] = icebreakerArray.filter(
+      (icebreaker) => icebreaker.category === category);
       setIcebreaker(newArray);
-      // setIcebreaker(allIcebreakers);
       setCategory(category);
       setCount(1);
-      console.log("first test");
-      console.log(icebreakers);
-      console.log("test");
-      console.log(allIcebreakers);
     } else {
-      setIcebreaker(allIcebreakers);
-      console.log(icebreakers);
-      console.log("second test");
+      let icebreakerArray = allIcebreakers;
       setCount(0);
-      let newArray: IceBreakers[] = allIcebreakers.filter(
-        (icebreaker) => icebreaker.category === category
-      );
-      console.log(newArray);
+      let newArray: IceBreakers[] = icebreakerArray.filter(icebreaker => icebreaker.category === category);
+
       setIcebreaker(newArray);
       setCategory(category);
     }
