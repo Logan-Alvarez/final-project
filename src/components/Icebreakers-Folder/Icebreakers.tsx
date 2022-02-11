@@ -11,6 +11,10 @@ export function Icebreakers() {
   const [category, setCategory] = useState("");
   const [count, setCount] = useState(0);
   const [filterFirst, setFilterFirst] = useState(true);
+  
+  let scrollBtn = document.getElementById('scrollTop') as HTMLElement;
+  window.onscroll = function(){scrollFunction()};
+
   //ICEBREAKER useEffect.
   useEffect(() => {
     getIceBreakers().then((data) => setIcebreaker(data));
@@ -36,6 +40,18 @@ export function Icebreakers() {
     }
   }
 
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  function scrollFunction() {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  }
+
   return (
     <div className="Icebreakers">
       <div>
@@ -58,6 +74,7 @@ export function Icebreakers() {
       ) : (
         <span></span>
       )}
+      <button onClick={topFunction} id="scrollTop">Top</button>
     </div>
   );
 }
