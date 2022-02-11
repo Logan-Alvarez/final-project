@@ -8,11 +8,12 @@ interface Props {
 
 function IcebreakerForm({ onSubmit }: Props) {
   const [category, setCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   function handleFormSubmit(e: FormEvent) {
     e.preventDefault();
+    setSelectedCategory(category);
     onSubmit(category);
-    setCategory("");
   }
 
   return (
