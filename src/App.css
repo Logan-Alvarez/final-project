@@ -41,7 +41,7 @@ a {
 
 .feature-container {
   text-align: center;
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 8px;
   width: 270px;
 }
@@ -54,10 +54,8 @@ a {
 }
 
 
-
 .feature-container:hover {
   box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgb(93, 0, 129);
-
 }
 
 .tool-container h2 {
@@ -65,6 +63,12 @@ a {
 }
 
 /* ICE BREAKER */
+
+.IcebreakerFavorites {
+  border: 2px white solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .Icebreakers {
   display: flex;
   flex-direction: column;
@@ -92,18 +96,24 @@ a {
   border-radius: 5px;
   text-shadow: 2px 2px 3px black, 0 0 25px blue, 0 0 5px darkblue;
   color: white;
-
   background-color: black;
 }
 
-
 /* TRIVIA */
+
+.TriviaForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: red; */
+}
 
 .Trivia {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+
 .smallButton:hover {
   box-shadow: 0 12px 16px 0 rgb(255, 255, 255),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -162,5 +172,4 @@ a {
   align-items: center;
 
   height: 200px;
-
 }

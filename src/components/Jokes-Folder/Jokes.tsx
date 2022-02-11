@@ -8,9 +8,9 @@ export function Jokes() {
   const [jokes, setJoke] = useState<jokes[]>([]);
 
   //JOKE useEffect.
-  // useEffect(() => {
-  //   fetchJokes().then((data) => setJoke(data));
-  // }, []);
+  useEffect(() => {
+    fetchJokes().then((data) => setJoke(data));
+  }, []);
 
   function newJoke() {
     fetchJokes().then((data) => setJoke(data));
@@ -19,7 +19,7 @@ export function Jokes() {
   console.log(jokes);
   return (
     <div className="Jokes">
-      <h1>Big boy Jokes</h1>
+      <h1>Super Funny Jokes</h1>
       <JokesList jokes={jokes} />
       <button onClick={newJoke} className="smallButton">
         Next

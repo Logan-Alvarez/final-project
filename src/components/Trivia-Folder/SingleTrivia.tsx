@@ -30,7 +30,9 @@ function SingleTrivia({ trivia }: Prop) {
       ) : (
         <div onClick={toggle}>Click for Answer</div>
       )}
-      <button onClick={addToFavorites}>+ Favorties</button>
+      <button className="smallButton" onClick={addToFavorites}>
+        + Favorties
+      </button>
     </div>
   );
 }
