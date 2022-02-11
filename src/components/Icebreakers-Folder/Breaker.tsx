@@ -8,7 +8,7 @@ interface Prop {
 
 export function Breaker({ icebreaker}: Prop) {
   function addToFavorites() {
-    postFavIcebreakers(icebreaker);
+      postFavIcebreakers(icebreaker); 
   }
 
   return (

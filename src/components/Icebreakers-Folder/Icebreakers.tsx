@@ -54,6 +54,7 @@ export function Icebreakers() {
 
   return (
     <div className="Icebreakers">
+      <span id="icebreakerTitle">Ice breakers</span>
       <div>
         <a className="Home" href="/">
           <svg
@@ -68,6 +69,7 @@ export function Icebreakers() {
           </svg>
         </a>
       </div>
+      
       <IcebreakerForm onSubmit={handleIcebreakerSubmit} />
       {category.length > 0 ? (
         <IcebreakerList icebreakers={icebreakers} />
