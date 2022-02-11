@@ -1,8 +1,8 @@
 body {
-  background-image: linear-gradient(to left, rgb(93, 0, 129), blue);
+  background-color: #000000;
   margin: 0;
-  height: 100%;
   font-family: "Times New Roman", Times, serif;
+  height: 100%;
 }
 
 :root {
@@ -31,19 +31,22 @@ a {
 .Main {
   height: 100%;
 }
-.tool-container {
+/* .tool-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-}
+} */
 
 .feature-container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  width: 270px;
+
+  /* background-color: none; */
+  /* border-radius: 50px; */
+  margin-bottom: 20px;
+
+
 }
 .feature-container p {
   margin-top: 0px;
@@ -55,7 +58,8 @@ a {
 
 
 .feature-container:hover {
-  box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgb(93, 0, 129);
+  /* box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgb(255, 255, 255);
+  transform: scale(1.05); */
 }
 
 .tool-container h2 {
@@ -75,6 +79,12 @@ a {
   justify-content: space-between;
   align-items: center;
   height: 200px;
+  height: 100%;
+  background-image: linear-gradient(
+    to left,
+    rgb(0, 140, 255),
+    rgb(255, 255, 255)
+  );
 }
 
 .Icebreakers #category {
@@ -101,17 +111,46 @@ a {
 
 /* TRIVIA */
 
+.triviaA {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
 .TriviaForm {
   display: flex;
   justify-content: center;
   flex-direction: column;
   /* background-color: red; */
+  align-items: center;
 }
 
 .Trivia {
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 0, 149),
+    rgb(255, 217, 0)
+  );
+}
+
+.mainlinks {
+  width: 350px;
+  height: 250px;
+  border-radius: 50%;
+  /* margin-top: 50px; */
+  /* box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgb(255, 255, 255);
+  transform: scale(1.05); */
+}
+
+.mainlinks:hover {
+  box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgb(255, 255, 255);
+  transform: scale(1.1);
 }
 
 .smallButton:hover {
@@ -124,7 +163,8 @@ a {
   font-weight: bold;
   width: 200px;
   border-radius: 5px;
-
+  margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -157,7 +197,6 @@ a {
   align-items: center;
   border: 2px white solid;
   margin: 10px 20px;
-  /* width: 500px; */
 }
 
 .IcebreakerList h1 {
@@ -172,4 +211,32 @@ a {
   align-items: center;
 
   height: 200px;
+}
+
+.header {
+  background-color: red;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: cursive;
+}
+
+.singleTrivia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.Jokes {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 0, 0),
+    rgb(255, 255, 255)
+  );
+  height: 100%;
+}
+
+.Favorites {
+  background-color: purple;
+  height: 100%;
 }

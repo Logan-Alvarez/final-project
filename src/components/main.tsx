@@ -1,35 +1,35 @@
 import { Link } from "react-router-dom";
 import social from "../images/social.gif";
+import trivia from "../images/trivia.jpg";
+import ice from "../images/ice.jpg";
+import joke from "../images/joke.png";
+import favorite from "../images/favorite.jpg";
 const Main = () => {
   return (
     <div className="Main">
-      <header>
-        {/* <img src={social} alt="Logo" className="Logo" /> */}
-        <Link to={"/Favorites"}>
-          <button className="smallButton">Favorites</button>
-        </Link>
-      </header>
-
-      <header>{/* <img src={SS} alt="Logo" className="Logo" /> */}</header>
-
+      <header className="header">Social Spark</header>
       <div className="tool-container">
         <Link to={"/Trivia"}>
           <div className="feature-container">
-            <h2>Trivia</h2>
-            <p>Wanna See Who's Got The Smarts?</p>
+            <img src={trivia} alt="trivia" className="mainlinks" />
           </div>
         </Link>
+
         <Link to={"/icebreakers"}>
           <div className="feature-container">
-            <h2>Icebreakers</h2>
-            <p>Lets Break Some Ice!</p>
+            <img src={ice} alt="" className="mainlinks" />
           </div>
         </Link>
+
         <Link to={"/Jokes"}>
           <div className="feature-container">
-            <h2>Jokes</h2>
-            <p>Be The Funny Person You Were Born To Be!</p>
+            <img src={joke} alt="" className="mainlinks" />
           </div>
+        </Link>
+      </div>
+      <div className="feature-container">
+        <Link to={"/Favorites"}>
+          <img src={favorite} alt="" className="mainlinks" />
         </Link>
       </div>
     </div>
