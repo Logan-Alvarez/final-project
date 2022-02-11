@@ -9,4 +9,5 @@ export interface jokes {
   type: string;
   setup: string;
   punchline: string;
+  NSFW: boolean;
 }
