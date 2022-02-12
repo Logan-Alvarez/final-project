@@ -7,11 +7,13 @@ import { Icebreakers } from "./components/Icebreakers-Folder/Icebreakers";
 import { Trivia } from "./components/Trivia-Folder/Trivia";
 import { Jokes } from "./components/Jokes-Folder/Jokes";
 import Favorites from "./components/Favorites-Folder/Favorites";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/Favorites" element={<Favorites />}></Route>

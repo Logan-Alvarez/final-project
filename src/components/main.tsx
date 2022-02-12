@@ -7,30 +7,29 @@ import favorite from "../images/favorite.jpg";
 const Main = () => {
   return (
     <div className="Main">
-      <header className="header">Social Spark</header>
       <div className="tool-container">
-        <Link to={"/Trivia"}>
-          <div className="feature-container">
-            <img src={trivia} alt="trivia" className="mainlinks" />
-          </div>
-        </Link>
+        <div className="feature-container1">
+          <Link to={"/Trivia"}>Trivia</Link>
+          <p>Test your wits and see who reigns supreme.</p>
+        </div>
 
-        <Link to={"/icebreakers"}>
-          <div className="feature-container">
-            <img src={ice} alt="" className="mainlinks" />
-          </div>
-        </Link>
+        <div className="feature-container2">
+          <Link to={"/icebreakers"}>Icebreakers</Link>
+          <p>Don't know what to say? No worries, we got you covered.</p>
+        </div>
 
-        <Link to={"/Jokes"}>
-          <div className="feature-container">
-            <img src={joke} alt="" className="mainlinks" />
-          </div>
-        </Link>
-      </div>
-      <div className="feature-container">
-        <Link to={"/Favorites"}>
-          <img src={favorite} alt="" className="mainlinks" />
-        </Link>
+        <div className="feature-container3">
+          <Link to={"/Jokes"}>Jokes</Link>
+          <p>Be the funny person you were meant to be.</p>
+          <p>Some of these jokes are NSFW. You've been warned.</p>
+        </div>
+
+        <div className="feature-container4">
+          <Link to={"/Favorites"}>Favorites</Link>
+          <p>
+            Check out your favorited Icebreakers,Jokes, and Trivia to use later.
+          </p>
+        </div>
       </div>
     </div>
   );
