@@ -17,7 +17,6 @@ function TriviaForm({ onSubmit }: Prop) {
   return (
     <div className="TriviaForm">
       <form className="TriviaForm" onSubmit={handleFromSubmit}>
-        <label htmlFor="category">Filter by category: </label>
         <select
           name="category"
           id="category"

@@ -22,10 +22,11 @@ a {
   font-weight: bold;
   text-decoration: none;
   color: #8899a6;
-  letter-spacing: px;
+  letter-spacing: 1px;
+  padding: 15px;
 }
 a:hover {
-  color: #ffffff;
+  color: rgb(221, 190, 14);
 }
 
 /* HEADER */
@@ -104,7 +105,7 @@ a:hover {
   margin: 5px 0;
 }
 
-.IcebreakerList h1 {
+.IcebreakerList h3 {
   color: #ffffff;
   margin-bottom: 5px;
 }
@@ -154,4 +155,38 @@ select {
   width: 50%;
   border-radius: 5px;
   border: none;
+}
+
+/* TRIVIA */
+
+.Trivia {
+  height: 100%;
+  background-color: #192734;
+}
+
+.triviaTitle {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8899a6;
+  font-size: xx-large;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.TriviaForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.TriviaList {
+  text-align: center;
 }

@@ -61,7 +61,7 @@ export function Icebreakers() {
 
   return (
     <div className="Icebreakers">
-      <span id="icebreakerTitle">Ice breakers</span>
+      <span id="icebreakerTitle">Icebreakers</span>
       <IcebreakerForm onSubmit={handleIcebreakerSubmit} />
       {category.length > 0 ? (
         <IcebreakerList icebreakers={icebreakers} />

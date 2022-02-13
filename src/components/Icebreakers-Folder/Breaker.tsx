@@ -1,23 +1,33 @@
+import { ObjectId } from "mongodb";
+import { useState } from "react";
 import { IceBreakers } from "../../models/Icebreakers";
-import { postFavIcebreakers } from "../../services/icebreaker-api";
+import {
+  deleteFavIcebreakers,
+  postFavIcebreakers,
+} from "../../services/icebreaker-api";
 
 interface Prop {
   icebreaker: IceBreakers;
   //display: boolean;
 }
 
-export function Breaker({ icebreaker}: Prop) {
+export function Breaker({ icebreaker }: Prop) {
+  const [add, setAdd] = useState<Boolean>(false);
   function addToFavorites() {
-      postFavIcebreakers(icebreaker); 
+    postFavIcebreakers(icebreaker);
+    setAdd(true);
   }
 
   return (
     <div className="Breaker">
-      <h3>Category- {icebreaker.category}</h3>
       <p>{icebreaker.question}</p>
-      <button className="smallButton" onClick={addToFavorites}>
-        Add To Favorites
-      </button>
+      {add ? (
+        <button className="smallButton"> Added</button>
+      ) : (
+        <button className="smallButton" onClick={addToFavorites}>
+          + favorites
+        </button>
+      )}
     </div>
   );
 }
