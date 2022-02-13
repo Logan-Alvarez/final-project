@@ -20,8 +20,8 @@ const customStyles = {
 };
 
 function SingleJoke({ joke }: Prop) {
-  const [nsfw, setNsfw] = useState<Boolean>(true);
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [nsfw, setNsfw] = useState<Boolean>(false);
+  const [modalIsOpen, setIsOpen] = useState(true);
 
   function closeModal() {
     setIsOpen(false);
@@ -34,10 +34,8 @@ function SingleJoke({ joke }: Prop) {
   if (joke.NSFW === true) {
     setNsfw(true);
     setIsOpen(true);
-  } else {
-    setNsfw(false);
-    setIsOpen(false);
-  }
+  } 
+ 
 
   //ADDED JOKE FILTER BUT HAS NOT BEEN TESTED. MIGHT NEED TO GO IN JOKESLIST
   //ADDED NSFW JOKE MODAL - HAS NOT BEEN TESTED. NEED TO SETNSFW TO TRUE TO TEST.
