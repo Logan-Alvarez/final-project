@@ -22,10 +22,12 @@ export function Breaker({ icebreaker }: Prop) {
     <div className="Breaker">
       <p>{icebreaker.question}</p>
       {add ? (
-        <button className="smallButton"> Added</button>
+        <button className="favorite-btn">
+          <i className="heart-yellow bi-heart-fill"></i>
+        </button>
       ) : (
-        <button className="smallButton" onClick={addToFavorites}>
-          + favorites
+        <button className="favorite-btn" onClick={addToFavorites}>
+          <i className="heart bi-heart-fill"></i>
         </button>
       )}
     </div>

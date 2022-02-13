@@ -15,6 +15,7 @@ body {
 
 .App {
   height: 100%;
+  background-color: #192734;
 }
 
 a {
@@ -42,7 +43,21 @@ a:hover {
   font-weight: bold;
   margin: 0;
 }
+.bi-bolt {
+  color: rgb(221, 190, 14);
+}
 .bi {
+  font-size: x-large;
+  color: #8899a6;
+}
+.bi:hover {
+  color: rgb(221, 190, 14);
+}
+.heart {
+  font-size: x-large;
+}
+
+.heart-yellow {
   font-size: x-large;
   color: rgb(221, 190, 14);
 }
@@ -117,6 +132,10 @@ a:hover {
   color: #ffffff;
 }
 
+.Breaker p {
+  padding: 0 50px;
+}
+
 .Breaker h3 {
   color: #8899a6;
 }
@@ -148,13 +167,30 @@ select {
 }
 
 #scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
   font-weight: bold;
   font-size: medium;
   font-family: "Prompt";
   margin: 3px 0 5px 0;
-  width: 50%;
+  width: 10%;
   border-radius: 5px;
   border: none;
+}
+
+.favorite-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+}
+button {
+  cursor: pointer;
 }
 
 /* TRIVIA */
@@ -162,10 +198,12 @@ select {
 .Trivia {
   height: 100%;
   background-color: #192734;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .triviaTitle {
-  padding-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,6 +225,111 @@ select {
   justify-content: space-around;
 }
 
+.stats h3 {
+  color: rgb(221, 190, 14);
+  margin: 0;
+}
+
 .TriviaList {
   text-align: center;
+}
+
+.singleTrivia {
+  color: #ffffff;
+}
+
+.singleTrivia h1 {
+  color: #8899a6;
+}
+
+.singleTrivia h3 {
+  color: rgb(221, 190, 14);
+}
+
+.answerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.answerForm label {
+  color: rgb(221, 190, 14);
+  font-size: x-large;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.answerForm input {
+  border-radius: 5px;
+  border: none;
+  padding: 3px;
+  width: 50%;
+}
+
+.next-question {
+  text-align: center;
+}
+
+.know-it {
+  font-weight: bold;
+  font-size: medium;
+  font-family: "Prompt";
+  margin: 3px 0 5px 0;
+  width: 35%;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Favorites */
+
+.favoritesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #192734;
+}
+.Favorites h2 {
+  color: #8899a6;
+}
+
+.favIcebreaker-Container {
+  height: 100%;
+}
+
+.IcebreakerFavorites {
+  text-align: center;
+  margin: 7px 0;
+  border: 3px solid #22303c;
+  color: #ffffff;
+  min-width: 75%;
+}
+
+.JokeFavorites {
+  text-align: center;
+  margin: 7px 0;
+  border: 3px solid #22303c;
+}
+.TriviaFavorites {
+  text-align: center;
+  margin: 7px 0;
+  border: 3px solid #22303c;
+  color: #ffffff;
+}
+
+.fav-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fav-btn {
+  font-weight: bold;
+  font-size: medium;
+  font-family: "Prompt";
+  margin: 3px 0 5px 0;
+  width: 25%;
+  border-radius: 5px;
+  border: none;
+  box-sizing: content-box;
 }

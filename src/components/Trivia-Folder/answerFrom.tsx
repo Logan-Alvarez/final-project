@@ -13,8 +13,8 @@ function AnswerForm({ onSubmit }: Prop) {
     setAnswer("");
   }
   return (
-    <div className="answerFrom">
-      <form onSubmit={handleAnswerSubmit}>
+    <div className="form-contianer">
+      <form onSubmit={handleAnswerSubmit} className="answerForm">
         <label htmlFor="answer">Think you know the answer?</label>
         <input
           type="text"
@@ -23,9 +23,10 @@ function AnswerForm({ onSubmit }: Prop) {
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
         />
-        <button type="submit">I know it!</button>
+        <button type="submit" className="know-it">
+          I know it!
+        </button>
       </form>
-      <h1>{answer}</h1>
     </div>
   );
 }
