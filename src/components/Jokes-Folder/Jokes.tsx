@@ -7,7 +7,6 @@ export function Jokes() {
   //HOOKS
   const [jokes, setJoke] = useState<jokes[]>([]);
 
-
   // JOKE
   useEffect(() => {
     fetchJokes().then((data) => setJoke(data));
@@ -25,6 +24,12 @@ export function Jokes() {
       <button onClick={newJoke} className="smallButton">
         Next
       </button>
+      <footer>
+        <a href="/">Home</a>
+        <a href="/Trivia">Trivia</a>
+        <a href="/Icebreakers">Icebreakers</a>
+        <a href="/Favorites">Favorites</a>
+      </footer>
     </div>
   );
 }

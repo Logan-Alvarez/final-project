@@ -57,6 +57,13 @@ export function Trivia() {
       <button onClick={NewQuestion} className="smallButton">
         Next Question
       </button>
+      <footer>
+        <a href="/">Home</a>
+        {/* <a href="/Trivia">Trivia</a> */}
+        <a href="/Icebreakers">Icebreakers</a>
+        <a href="/Jokes">Jokes</a>
+        <a href="/Favorites">Favorites</a>
+      </footer>
     </div>
   );
 }
