@@ -71,6 +71,12 @@ export function Icebreakers() {
       <button onClick={topFunction} id="scrollTop">
         <i className="bi bi-arrow-up-circle-fill"></i>
       </button>
+      <footer>
+        <a href="/">Home</a>
+        <a href="/Trivia">Trivia</a>
+        <a href="/Jokes">Jokes</a>
+        <a href="/Favorites">Favorites</a>
+      </footer>
     </div>
   );
 }
