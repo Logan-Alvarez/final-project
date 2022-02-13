@@ -20,7 +20,6 @@ function AnswerForm({ onSubmit }: Prop) {
           type="text"
           name="answer"
           id="answer"
-          placeholder="Feeling lucky?"
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
         />
