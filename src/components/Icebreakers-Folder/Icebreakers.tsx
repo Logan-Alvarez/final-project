@@ -69,7 +69,7 @@ export function Icebreakers() {
         <span></span>
       )}
       <button onClick={topFunction} id="scrollTop">
-        Top
+        <i className="bi bi-arrow-up-circle-fill"></i>
       </button>
     </div>
   );

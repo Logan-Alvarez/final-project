@@ -4,10 +4,12 @@ import { postFavTrivia } from "../../services/trivia-api";
 
 interface Prop {
   trivia: Data;
+  color: Boolean;
 }
 
-function SingleTrivia({ trivia }: Prop) {
+function SingleTrivia({ trivia, color }: Prop) {
   const [hide, setHide] = useState(false);
+  const [colors, setColors] = useState(color);
 
   function toggle() {
     if (hide === false) {
@@ -19,11 +21,23 @@ function SingleTrivia({ trivia }: Prop) {
 
   function addToFavorites() {
     postFavTrivia(trivia);
+    setColors(true);
   }
 
   return (
     <div className="singleTrivia">
-      <h1>Trivia Question:</h1>
+      <h1>
+        Question{" "}
+        {colors ? (
+          <button className="favorite-btn">
+            <i className="heart-yellow bi-heart-fill"></i>
+          </button>
+        ) : (
+          <button className="favorite-btn" onClick={addToFavorites}>
+            <i className="heart bi-heart-fill"></i>
+          </button>
+        )}
+      </h1>
       <h3 className="triviaA">{trivia.question}</h3>
       {hide ? (
         <h3 className="triviaA" onClick={toggle}>
@@ -32,9 +46,6 @@ function SingleTrivia({ trivia }: Prop) {
       ) : (
         <div onClick={toggle}>Click for Answer</div>
       )}
-      <button className="smallButton" onClick={addToFavorites}>
-        Add To Favorites
-      </button>
     </div>
   );
 }

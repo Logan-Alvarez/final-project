@@ -19,13 +19,15 @@ function TriviaFavorites({ trivias, onSubmit }: Prop) {
   }
 
   return (
-    <div className="TriviaFavorites">
+    <div className="TriviaFavorites-container">
       {trivias.map((trivia, i) => (
-        <div key={i}>
-          <h1>{trivia.question}</h1>
-          <h4>{trivia.answer}</h4>
+        <div key={i} className="TriviaFavorites">
+          <h2>{trivia.question}</h2>
+          <h4>Answer - {trivia.answer}</h4>
           <form onSubmit={(e) => removeFavorite(i, e)}>
-            <button className="smallButton">- Favorites</button>
+            <button className="delete-btn">
+              <i className="bi bi-trash-fill"></i>
+            </button>
           </form>
         </div>
       ))}

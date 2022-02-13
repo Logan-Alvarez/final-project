@@ -3,13 +3,14 @@ import SingleTrivia from "../Trivia-Folder/SingleTrivia";
 
 interface Prop {
   trivias: Data[];
+  color: Boolean;
 }
 
-export function TriviaList({ trivias }: Prop) {
+export function TriviaList({ trivias, color }: Prop) {
   return (
     <div className="TriviaList">
       {trivias.map((trivia, i) => (
-        <SingleTrivia key={i} trivia={trivia} />
+        <SingleTrivia key={i} trivia={trivia} color={color} />
       ))}
     </div>
   );
