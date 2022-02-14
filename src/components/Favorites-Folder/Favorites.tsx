@@ -92,7 +92,6 @@ function Favorites() {
           <TriviaFavorites onSubmit={handleOnSubmitTrivia} trivias={trivias} />
         </div>
       )}
-      <Footer />
     </div>
   );
 }

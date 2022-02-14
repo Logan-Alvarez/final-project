@@ -193,6 +193,19 @@ button {
   cursor: pointer;
 }
 
+.modal-btn {
+  background-color: #22303c;
+  font-weight: bold;
+  font-size: medium;
+  font-family: "Prompt";
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+}
+.modal-div {
+  text-align: center;
+}
+
 /* TRIVIA */
 
 .Trivia {
@@ -334,6 +347,44 @@ button {
   box-sizing: content-box;
 }
 
+/* JOKES */
+
+.Jokes {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #192734;
+  text-align: center;
+}
+.JokesList {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joke-title {
+  color: #8899a6;
+}
+
+.SingleJoke {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.SingleJoke h2 {
+  color: #ffffff;
+}
+
+.SingleJoke h3 {
+  color: rgb(221, 190, 14);
+}
+=======
 .Footer {
   width: 100%;
   text-align: center;
@@ -343,3 +394,4 @@ button {
   padding-left: 10px;
   padding-right: 10px;
 }
+
