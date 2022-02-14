@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Data from "../../models/Trivia";
 import { fetchTrivia } from "../../services/trivia-api";
+import Footer from "../Footer";
 import AnswerForm from "./answerFrom";
 import TriviaForm from "./TriviaForm";
 import { TriviaList } from "./TriviaList";
@@ -10,7 +11,8 @@ export function Trivia() {
   const [trivias, setTrivia] = useState<Data[]>([]);
   const [category, setCategory] = useState<string>("");
   const [color, setColor] = useState<Boolean>(false);
-
+  let theColor: Boolean = color;
+  console.log(theColor);
   //Game Hooks
   let [chances, setChances] = useState<number>(3);
   let [score, setScore] = useState<number>(0);
@@ -27,7 +29,10 @@ export function Trivia() {
 
   function NewQuestion() {
     fetchTrivia(category).then((data) => setTrivia(data));
-    setColor(false);
+    theColor = true;
+    console.log(theColor);
+    // theColor isnt being passed as true after new question is clikced.
+    // it is staying false.... why
   }
 
   function handleAnswerSubmit(guess: string) {
@@ -54,18 +59,12 @@ export function Trivia() {
         <h3>Score: {score}</h3>
         <h3>High Score: {highScore}</h3>
       </section>
-      <TriviaList trivias={trivias} color={color} />
+      <TriviaList trivias={trivias} color={theColor} /> 
       <AnswerForm onSubmit={handleAnswerSubmit} />
       <button onClick={NewQuestion} className="smallButton">
         Next Question
       </button>
-      <footer>
-        <a href="/">Home</a>
-        {/* <a href="/Trivia">Trivia</a> */}
-        <a href="/Icebreakers">Icebreakers</a>
-        <a href="/Jokes">Jokes</a>
-        <a href="/Favorites">Favorites</a>
-      </footer>
+      <Footer />
     </div>
   );
 }
