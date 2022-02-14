@@ -324,10 +324,11 @@ button {
   min-width: 75%;
 }
 
-.JokeFavorites {
+.singleJokeFavorite {
+  border: 3px solid #22303c;
   text-align: center;
   margin: 7px 0;
-  border: 3px solid #22303c;
+  color: #ffffff;
 }
 .TriviaFavorites {
   text-align: center;
@@ -389,7 +390,7 @@ button {
 .SingleJoke h3 {
   color: rgb(221, 190, 14);
 }
-=======
+
 .Footer {
   width: 100%;
   text-align: center;
@@ -399,7 +400,6 @@ button {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 
 /* Tablet */
 @media screen and (min-width: 768px) {
