@@ -15,20 +15,22 @@ function JokeFavorites({ jokes, onSubmit }: Prop) {
     deleteFavoriteJoke(foundId);
     onSubmit(index);
   }
+  console.log(jokes);
 
   return (
     <div className="JokeFavorites">
-      <div>
-        {jokes.map((joke, i) => {
-          <div key={i}>
-            <h3>{joke.setup}</h3>
-            <h4>{joke.punchline}</h4>
-            <form onSubmit={(e) => removeFavorite(i, e)}>
-              <button className="smallButton">- Favorites</button>
-            </form>
-          </div>;
-        })}
-      </div>
+      {jokes.map((joke, i) => (
+        <div key={i} className="singleJokeFavorite">
+          <h2>Setup: {joke.setup}</h2>
+          <h3>Punchline: {joke.punchline}</h3>
+          <form onSubmit={(e) => removeFavorite(i, e)}>
+            <button className="delete-btn">
+              <i className="bi bi-trash-fill"></i>
+            </button>
+          </form>
+        </div>
+      ))}
+      ;
     </div>
   );
 }
