@@ -22,40 +22,55 @@ const customStyles = {
 function SingleJoke({ joke }: Prop) {
   const [nsfw, setNsfw] = useState<Boolean>(false);
   const [modalIsOpen, setIsOpen] = useState(true);
+  const [add, setAdd] = useState<Boolean>(false);
 
   function closeModal() {
     setIsOpen(false);
+    setNsfw(false);
   }
 
   function handleFavorite() {
     postFavoriteJokes(joke);
+    setAdd(true);
   }
-  //Might have to convert NSFW in api to string.
+
   if (joke.NSFW === true) {
     setNsfw(true);
     setIsOpen(true);
-  } 
- 
+  }
 
-  //ADDED JOKE FILTER BUT HAS NOT BEEN TESTED. MIGHT NEED TO GO IN JOKESLIST
-  //ADDED NSFW JOKE MODAL - HAS NOT BEEN TESTED. NEED TO SETNSFW TO TRUE TO TEST.
   return (
-    <div>
+    <div className="SingleJoke">
       {nsfw ? (
         <Modal isOpen={modalIsOpen} style={customStyles}>
           <p>
-            This joke has been flagged for NSFW content. Proceed with caution.
+            This joke has been flagged for Adult humor. Proceed with caution.
           </p>
-          <button onClick={closeModal}>I understand</button>
+          <div className="modal-div">
+            <button onClick={closeModal} className="modal-btn">
+              I understand
+            </button>
+          </div>
         </Modal>
       ) : (
         <>
-          <h1>Single Joke</h1>
-          <h3>{joke.setup}</h3>
-          <h4>{joke.punchline}</h4>
-          <button onClick={handleFavorite} className="smallButton">
-            Add To Favorites
-          </button>
+          <div className="joke-setup">
+            <h2>Setup</h2>
+            <h3>{joke.setup}</h3>
+          </div>
+          <div className="joke-punchline">
+            <h2>Punchline</h2>
+            <h3>{joke.punchline}</h3>
+          </div>
+          {add ? (
+            <button className="favorite-btn">
+              <i className="heart-yellow bi-heart-fill"></i>
+            </button>
+          ) : (
+            <button className="favorite-btn" onClick={handleFavorite}>
+              <i className="heart bi-heart-fill"></i>
+            </button>
+          )}
         </>
       )}
     </div>
