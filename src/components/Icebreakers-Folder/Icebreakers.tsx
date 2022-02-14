@@ -3,6 +3,7 @@ import { getIceBreakers } from "../../services/icebreaker-api";
 import { IceBreakers } from "../../models/Icebreakers";
 import { IcebreakerList } from "./IcebreakerList";
 import IcebreakerForm from "./IcebreakerForm";
+import Footer from "../Footer";
 
 export function Icebreakers() {
   //HOOK

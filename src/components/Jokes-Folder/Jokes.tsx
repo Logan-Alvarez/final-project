@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { jokes } from "../../models/Joke";
 import { fetchJokes } from "../../services/joke-api";
+import Footer from "../Footer";
 import { JokesList } from "./JokesList";
 
 export function Jokes() {

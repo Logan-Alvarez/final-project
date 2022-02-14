@@ -5,6 +5,7 @@ import Data from "../../models/Trivia";
 import { getFavIcebreakers } from "../../services/icebreaker-api";
 import { fetchFavoriteJokes } from "../../services/joke-api";
 import { getFavTrivia } from "../../services/trivia-api";
+import Footer from "../Footer";
 import IcebreakerFavorites from "./IcebreakerFavorites";
 import FavoritesList from "./IcebreakerFavorites";
 import JokeFavorites from "./JokeFavorites";
