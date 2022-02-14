@@ -7,6 +7,7 @@ interface Prop {
 }
 
 export function TriviaList({ trivias, color }: Prop) {
+  console.log(color);
   return (
     <div className="TriviaList">
       {trivias.map((trivia, i) => (

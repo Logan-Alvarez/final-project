@@ -9,7 +9,22 @@ interface Prop {
 
 function SingleTrivia({ trivia, color }: Prop) {
   const [hide, setHide] = useState(false);
-  const [colors, setColors] = useState(color);
+  const [colors, setColors] = useState(false);
+  const [showYellow, setShowYellow] = useState(false);
+  const [count, setCount] = useState(0);
+ // let showYellow: Boolean = false;
+  // if(count %2 === 1 ){
+  //   color = false;
+  // }
+ //if next question is clicked and blank heart is clicked
+ // make heart yellow- once clicked color stays true
+//  if(count%2 === 0){
+if(color === true && colors === true){
+
+  setColors(false);
+  color = false;
+}
+ 
 
   function toggle() {
     if (hide === false) {
@@ -20,8 +35,15 @@ function SingleTrivia({ trivia, color }: Prop) {
   }
 
   function addToFavorites() {
-    postFavTrivia(trivia);
+    // change heart to yellow
+    postFavTrivia(trivia);  
     setColors(true);
+    setCount(count+1);
+  }
+
+  function removeYellow(){
+    setColors(false);
+   
   }
 
   return (
@@ -29,7 +51,7 @@ function SingleTrivia({ trivia, color }: Prop) {
       <h1>
         Question{" "}
         {colors ? (
-          <button className="favorite-btn">
+          <button className="favorite-btn" onClick={removeYellow}>
             <i className="heart-yellow bi-heart-fill"></i>
           </button>
         ) : (
