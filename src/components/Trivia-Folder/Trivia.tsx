@@ -10,6 +10,7 @@ export function Trivia() {
   //HOOK
   const [trivias, setTrivia] = useState<Data[]>([]);
   const [category, setCategory] = useState<string>("");
+  const [color, setColor] = useState<Boolean>(false);
 
   //Game Hooks
   let [chances, setChances] = useState<number>(3);
@@ -54,7 +55,7 @@ export function Trivia() {
         <h3>Score: {score}</h3>
         <h3>High Score: {highScore}</h3>
       </section>
-      <TriviaList trivias={trivias} />
+      <TriviaList trivias={trivias} color={color} />
       <AnswerForm onSubmit={handleAnswerSubmit} />
       <div className="next-question">
         <button onClick={NewQuestion} className="smallButton">
