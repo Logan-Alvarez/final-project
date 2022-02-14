@@ -10,24 +10,26 @@ const Main = () => {
       <div className="tool-container">
         <div className="feature-container1">
           <Link to={"/Trivia"}>Trivia</Link>
-          <p>Test your wits and see who reigns supreme.</p>
+          <p>Test your wits and see who reigns supreme</p>
         </div>
 
         <div className="feature-container2">
           <Link to={"/icebreakers"}>Icebreakers</Link>
-          <p>Don't know what to say? No worries, we got you covered.</p>
+          <p>Don't know what to say? No worries, we got you covered</p>
         </div>
 
         <div className="feature-container3">
           <Link to={"/Jokes"}>Jokes</Link>
-          <p>Be the funny person you were meant to be.</p>
-          <p>Some of these jokes are NSFW. You've been warned.</p>
+          <p>Be the funny person you were meant to be!</p>
+
+          <p className="warning">Adult Content Ahead</p>
         </div>
 
         <div className="feature-container4">
           <Link to={"/Favorites"}>Favorites</Link>
           <p>
-            Check out your favorited Icebreakers,Jokes, and Trivia to use later.
+            Check out your favorited Icebreakers, Jokes, and Trivia to use
+            later.
           </p>
         </div>
       </div>

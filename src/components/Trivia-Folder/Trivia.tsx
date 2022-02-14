@@ -59,7 +59,7 @@ export function Trivia() {
         <h3>Score: {score}</h3>
         <h3>High Score: {highScore}</h3>
       </section>
-      <TriviaList trivias={trivias} color={theColor} /> 
+      <TriviaList trivias={trivias} color={theColor} />
       <AnswerForm onSubmit={handleAnswerSubmit} />
       <button onClick={NewQuestion} className="smallButton">
         Next Question
