@@ -5,6 +5,7 @@ import Data from "../../models/Trivia";
 import { getFavIcebreakers } from "../../services/icebreaker-api";
 import { fetchFavoriteJokes } from "../../services/joke-api";
 import { getFavTrivia } from "../../services/trivia-api";
+import Footer from "../Footer";
 import IcebreakerFavorites from "./IcebreakerFavorites";
 import FavoritesList from "./IcebreakerFavorites";
 import JokeFavorites from "./JokeFavorites";
@@ -91,12 +92,7 @@ function Favorites() {
           <TriviaFavorites onSubmit={handleOnSubmitTrivia} trivias={trivias} />
         </div>
       )}
-      <footer>
-        <a href="/">Home</a>
-        <a href="/Trivia">Trivia</a>
-        <a href="/Icebreakers">Icebreakers</a>
-        <a href="/Jokes">Jokes</a>
-      </footer>
+      <Footer />
     </div>
   );
 }

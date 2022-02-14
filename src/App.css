@@ -333,3 +333,11 @@ button {
   border: none;
   box-sizing: content-box;
 }
+
+.Footer {
+  width: 100%;
+  text-align: center;
+}
+.Footer a {
+  font-size: x-small;
+}
