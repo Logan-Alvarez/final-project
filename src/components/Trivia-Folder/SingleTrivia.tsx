@@ -4,27 +4,11 @@ import { postFavTrivia } from "../../services/trivia-api";
 
 interface Prop {
   trivia: Data;
-  color: Boolean;
 }
 
-function SingleTrivia({ trivia, color }: Prop) {
+function SingleTrivia({ trivia }: Prop) {
   const [hide, setHide] = useState(false);
-  const [colors, setColors] = useState(false);
-  const [showYellow, setShowYellow] = useState(false);
-  const [count, setCount] = useState(0);
- // let showYellow: Boolean = false;
-  // if(count %2 === 1 ){
-  //   color = false;
-  // }
- //if next question is clicked and blank heart is clicked
- // make heart yellow- once clicked color stays true
-//  if(count%2 === 0){
-if(color === true && colors === true){
-
-  setColors(false);
-  color = false;
-}
- 
+  const [add, setAdd] = useState<Boolean>(false);
 
   function toggle() {
     if (hide === false) {
@@ -36,22 +20,16 @@ if(color === true && colors === true){
 
   function addToFavorites() {
     // change heart to yellow
-    postFavTrivia(trivia);  
-    setColors(true);
-    setCount(count+1);
-  }
-
-  function removeYellow(){
-    setColors(false);
-   
+    postFavTrivia(trivia);
+    setAdd(true);
   }
 
   return (
     <div className="singleTrivia">
       <h1>
         Question{" "}
-        {colors ? (
-          <button className="favorite-btn" onClick={removeYellow}>
+        {add ? (
+          <button className="favorite-btn">
             <i className="heart-yellow bi-heart-fill"></i>
           </button>
         ) : (

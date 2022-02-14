@@ -10,16 +10,7 @@ export function Trivia() {
   //HOOK
   const [trivias, setTrivia] = useState<Data[]>([]);
   const [category, setCategory] = useState<string>("");
-  const [color, setColor] = useState<Boolean>(false);
-  // color starts as false- heart is black in single trivia
-  // on click of new question change theColor to true if it was yellow in single trivia and pass it as prop
-  // so the heart is reset to black in single trivia
-  let theColor: Boolean = color; 
-  if(color){
-    theColor = true;
-  } else {
-    theColor = false;
-  }
+
   //Game Hooks
   let [chances, setChances] = useState<number>(3);
   let [score, setScore] = useState<number>(0);
@@ -28,7 +19,6 @@ export function Trivia() {
   useEffect(() => {
     fetchTrivia(category).then((data) => setTrivia(data));
   }, [category]);
-  //console.log(trivia);
 
   function handleOnSubmit(category: string) {
     setCategory(category);
@@ -36,7 +26,6 @@ export function Trivia() {
 
   function NewQuestion() {
     fetchTrivia(category).then((data) => setTrivia(data));
-    setColor(true);
     // theColor isnt being passed as true after new question is clikced.
     // it is staying false.... why
   }
@@ -65,7 +54,7 @@ export function Trivia() {
         <h3>Score: {score}</h3>
         <h3>High Score: {highScore}</h3>
       </section>
-      <TriviaList trivias={trivias} color={theColor} />
+      <TriviaList trivias={trivias} />
       <AnswerForm onSubmit={handleAnswerSubmit} />
       <div className="next-question">
         <button onClick={NewQuestion} className="smallButton">
