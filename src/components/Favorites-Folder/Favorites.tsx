@@ -91,12 +91,6 @@ function Favorites() {
           <TriviaFavorites onSubmit={handleOnSubmitTrivia} trivias={trivias} />
         </div>
       )}
-      <footer>
-        <a href="/">Home</a>
-        <a href="/Trivia">Trivia</a>
-        <a href="/Icebreakers">Icebreakers</a>
-        <a href="/Jokes">Jokes</a>
-      </footer>
     </div>
   );
 }

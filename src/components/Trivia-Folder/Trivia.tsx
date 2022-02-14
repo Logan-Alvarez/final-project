@@ -56,16 +56,11 @@ export function Trivia() {
       </section>
       <TriviaList trivias={trivias} color={color} />
       <AnswerForm onSubmit={handleAnswerSubmit} />
-      <button onClick={NewQuestion} className="smallButton">
-        Next Question
-      </button>
-      <footer>
-        <a href="/">Home</a>
-        {/* <a href="/Trivia">Trivia</a> */}
-        <a href="/Icebreakers">Icebreakers</a>
-        <a href="/Jokes">Jokes</a>
-        <a href="/Favorites">Favorites</a>
-      </footer>
+      <div className="next-question">
+        <button onClick={NewQuestion} className="smallButton">
+          Next Question
+        </button>
+      </div>
     </div>
   );
 }
