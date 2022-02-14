@@ -340,4 +340,6 @@ button {
 }
 .Footer a {
   font-size: x-small;
+  padding-left: 10px;
+  padding-right: 10px;
 }
