@@ -285,8 +285,10 @@ button {
   width: 50%;
 }
 
-.next-question {
-  text-align: center;
+.next-question{
+  display: flex;
+  justify-content: center;
+  
 }
 
 .know-it {
@@ -310,6 +312,7 @@ button {
 }
 .Favorites h2 {
   color: #8899a6;
+  text-align: center;
 }
 
 .favIcebreaker-Container {
@@ -462,6 +465,10 @@ button {
   .feature-container4 a {
     font-size: 50px;
   }
+  .Footer a {
+    font-size: medium;
+    transition: 0.4s
+  }
 }
 
 /* Desktop */
@@ -524,5 +531,15 @@ button {
   .feature-container4 a {
     font-size: 50px;
   }
+  .Footer {
+    background-color: #192734;
+
+  }
+  .Footer a {
+    font-size: x-large;
+    transition: 0.4s;
+    padding-bottom: 0px;
+  }
+
 }
 
