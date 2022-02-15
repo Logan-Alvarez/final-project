@@ -20,7 +20,7 @@ const customStyles = {
 };
 
 function SingleJoke({ joke }: Prop) {
-  const [nsfw, setNsfw] = useState<Boolean>(false);
+  const [nsfw, setNsfw] = useState<Boolean>(true);
   const [modalIsOpen, setIsOpen] = useState(true);
   const [add, setAdd] = useState<Boolean>(false);
 
@@ -49,9 +49,7 @@ function SingleJoke({ joke }: Prop) {
     <div className="SingleJoke">
       {nsfw ? (
         <Modal isOpen={modalIsOpen} style={customStyles}>
-          <p>
-            This joke has been flagged for Adult humor. Proceed with caution.
-          </p>
+          <p>These jokes may contain adult content.</p>
           <div className="modal-div">
             <button onClick={closeModal} className="modal-btn">
               I understand

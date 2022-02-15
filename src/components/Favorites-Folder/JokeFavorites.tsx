@@ -30,7 +30,6 @@ function JokeFavorites({ jokes, onSubmit }: Prop) {
           </form>
         </div>
       ))}
-      ;
     </div>
   );
 }
