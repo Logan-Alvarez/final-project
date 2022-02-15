@@ -4,13 +4,22 @@ import { postFavTrivia } from "../../services/trivia-api";
 
 interface Prop {
   trivia: Data;
-  color: Boolean;
+  color: boolean;
 }
 
 function SingleTrivia({ trivia, color }: Prop) {
   const [hide, setHide] = useState(false);
-  const [add, setAdd] = useState<Boolean>(color);
-  const [alwaysFalse, setAlwaysFalse] = useState<Boolean>(false);
+  const [add, setAdd] = useState<boolean>(color);
+  const [alwaysFalse, setAlwaysFalse] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (add) {
+      setAdd(false);
+    }
+    if (hide) {
+      setHide(false);
+    }
+  }, [trivia]);
 
   function toggle() {
     if (hide === false) {

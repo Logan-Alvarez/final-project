@@ -3,7 +3,7 @@ import SingleTrivia from "../Trivia-Folder/SingleTrivia";
 
 interface Prop {
   trivias: Data[];
-  color: Boolean;
+  color: boolean;
 }
 
 export function TriviaList({ trivias, color }: Prop) {
