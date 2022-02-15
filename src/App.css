@@ -28,6 +28,12 @@ a {
 }
 a:hover {
   color: rgb(221, 190, 14);
+  text-shadow: 1px 1px 2px white, 0 0 25px rgb(221, 190, 14),
+    0 0 5px rgb(221, 190, 14);
+}
+
+a:active {
+  font-size: 150%;
 }
 
 /* HEADER */
@@ -163,13 +169,33 @@ select {
   width: 70%;
   border-radius: 5px;
   border: none;
-  background-color: red;
 }
 
-.smallButton:hover {
+.nextButton {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: medium;
+  font-family: "Prompt";
+  margin: 3px 0 5px 0;
+  width: 30%;
+  border-radius: 5px;
+  border: none;
+}
+
+.nextButton:hover,
+.smallButton:hover,
+.know-it:hover {
   transition: 0.3s;
   background-color: rgb(221, 190, 14);
 }
+
+/* .feature-container1:hover { 
+  transition: width 2s, height 2s, transform 2s; 
+  width: 300px; 
+  height: 300px; 
+  transform: rotate(90deg); 
+} */
 
 #scrollTop {
   display: none;
@@ -235,17 +261,20 @@ button {
 .TriviaForm {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .stats {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .stats h3 {
   color: rgb(221, 190, 14);
   margin: 0;
+  font-size: 30px;
 }
 
 .TriviaList {
@@ -285,10 +314,9 @@ button {
   width: 50%;
 }
 
-.next-question{
+.next-question {
   display: flex;
   justify-content: center;
-  
 }
 
 .know-it {
@@ -312,11 +340,11 @@ button {
 }
 .Favorites h2 {
   color: #8899a6;
-  text-align: center;
 }
 
 .favIcebreaker-Container {
   height: 100%;
+  width: 97%;
 }
 
 .IcebreakerFavorites {
@@ -325,29 +353,40 @@ button {
   border: 3px solid #22303c;
   color: #ffffff;
   min-width: 75%;
+  width: 100%;
 }
 
-.singleJokeFavorite {
-  border: 3px solid #22303c;
+.JokeFavorites {
   text-align: center;
   margin: 7px 0;
-  color: #ffffff;
+  border: 3px solid #22303c;
 }
 .TriviaFavorites {
   text-align: center;
   margin: 7px 0;
   border: 3px solid #22303c;
   color: #ffffff;
+  width: 97%;
+}
+
+.TriviaFavorites-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .fav-buttons {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 .fav-btn {
+  background-color: rgb(221, 190, 14);
   font-weight: bold;
-  font-size: medium;
+  font-size: 25px;
   font-family: "Prompt";
   margin: 3px 0 5px 0;
   width: 25%;
@@ -397,12 +436,55 @@ button {
 .Footer {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .Footer a {
-  font-size: x-small;
+  font-size: 30px;
   padding-left: 10px;
   padding-right: 10px;
+  text-decoration: underline;
+  text-decoration-color: rgb(221, 190, 14);
+  text-decoration-style: solid;
 }
+
+.back {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.fav {
+  color: rgb(221, 190, 14);
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.click {
+  font-size: 20px;
+  border-radius: 10px;
+  width: 25%;
+  font-weight: bold;
+}
+
+.click:hover {
+  background-color: rgb(221, 190, 14);
+  transition: 0.3s;
+}
+
+#category {
+  width: 200px;
+}
+
+/* .IcebreakerList { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  width: 50%; 
+} */
 
 /* Tablet */
 @media screen and (min-width: 768px) {
@@ -465,10 +547,6 @@ button {
   .feature-container4 a {
     font-size: 50px;
   }
-  .Footer a {
-    font-size: medium;
-    transition: 0.4s
-  }
 }
 
 /* Desktop */
@@ -480,7 +558,7 @@ button {
 
   .Main {
     /* height: 100%; */
-    background-color: #192734;
+    background-color: rgb(221, 190, 14);
   }
 
   p {
@@ -531,15 +609,76 @@ button {
   .feature-container4 a {
     font-size: 50px;
   }
-  .Footer {
-    background-color: #192734;
 
-  }
-  .Footer a {
-    font-size: x-large;
-    transition: 0.4s;
-    padding-bottom: 0px;
+  .next-question {
+    align-items: center;
+    height: 75px;
   }
 
+  /* Trivia Page-------------------------------------------------------------------------------------------------------------- */
+
+  .stats {
+    /* display: flex; 
+    flex-direction: column; */
+  }
+
+  .triviaTitle {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #answer {
+    height: 25px;
+  }
+
+  .nextButton {
+    font-size: 20px;
+    width: 120px;
+  }
+
+  .know-it {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* Favorites Page ------------------------------------------------------------------------------------------------------------- */
+  .fav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .IcebreakerList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: center; */
+  }
+
+  .Breaker {
+    width: 25%;
+  }
+
+  .IcebreakerList p {
+    font-size: 25px;
+  }
+
+  .IcebreakerList h3 {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    color: rgb(221, 190, 14);
+    display: block;
+  }
 }
-
