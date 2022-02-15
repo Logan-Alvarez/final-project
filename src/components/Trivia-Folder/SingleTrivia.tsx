@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Data from "../../models/Trivia";
 import { postFavTrivia } from "../../services/trivia-api";
 
