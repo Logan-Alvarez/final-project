@@ -4,11 +4,11 @@ import { ObjectId } from "mongodb";
 import Trivia from "../models/Trivia";
 
 export function fetchTrivia(category: string): Promise<Trivia[]> {
-  //const apiKey = process.env.TRIVIA_API_KEY as string;
+  const apiKey = process.env.REACT_APP_TRIVIA_API_KEY as string;
   return axios
     .get("https://api.api-ninjas.com/v1/trivia?category=" + category, {
       headers: {
-        "X-Api-Key": "k0oavaV3QHHSU6dHS42jPw==brteR2986ZEA5ZGN",
+        "X-Api-Key": apiKey,
       },
     })
     .then((res) => res.data);
