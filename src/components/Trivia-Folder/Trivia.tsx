@@ -10,7 +10,7 @@ export function Trivia() {
   //HOOK
   const [trivias, setTrivia] = useState<Data[]>([]);
   const [category, setCategory] = useState<string>("");
-  const [color, setColor] = useState<Boolean>(false);
+  const [color, setColor] = useState<boolean>(false);
 
   //Game Hooks
   let [chances, setChances] = useState<number>(3);
@@ -27,6 +27,7 @@ export function Trivia() {
 
   function NewQuestion() {
     fetchTrivia(category).then((data) => setTrivia(data));
+    setColor(true);
     // theColor isnt being passed as true after new question is clikced.
     // it is staying false.... why
   }
