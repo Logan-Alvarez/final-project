@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { jokes } from "../../models/Joke";
 import { postFavoriteJokes } from "../../services/joke-api";
 import Modal from "react-modal";
@@ -23,6 +23,12 @@ function SingleJoke({ joke }: Prop) {
   const [nsfw, setNsfw] = useState<Boolean>(false);
   const [modalIsOpen, setIsOpen] = useState(true);
   const [add, setAdd] = useState<Boolean>(false);
+
+  useEffect(() => {
+    if (add) {
+      setAdd(false);
+    }
+  }, [joke]);
 
   function closeModal() {
     setIsOpen(false);
