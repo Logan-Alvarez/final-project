@@ -61,7 +61,9 @@ export function Trivia() {
         <button onClick={NewQuestion} className="smallButton">
           Next Question
         </button>
-      </div>
+        </div>
+        <Footer />
+     
     </div>
   );
 }

@@ -25,6 +25,7 @@ export function Jokes() {
       <button onClick={newJoke} className="smallButton">
         Next
       </button>
+      <Footer />
     </div>
   );
 }

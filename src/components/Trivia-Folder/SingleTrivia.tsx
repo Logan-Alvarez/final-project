@@ -46,7 +46,7 @@ function SingleTrivia({ trivia, color }: Prop) {
           {trivia.answer}
         </h3>
       ) : (
-        <div onClick={toggle}>Click for Answer</div>
+        <button onClick={toggle}>Click for Answer</button>
       )}
     </div>
   );
