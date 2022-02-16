@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IceBreakers } from "../../models/Icebreakers";
 import {
   deleteFavIcebreakers,
@@ -17,6 +17,12 @@ export function Breaker({ icebreaker }: Prop) {
     postFavIcebreakers(icebreaker);
     setAdd(true);
   }
+
+  useEffect(() => {
+    if (add) {
+      setAdd(false);
+    }
+  }, [icebreaker]);
 
   return (
     <div className="Breaker">
