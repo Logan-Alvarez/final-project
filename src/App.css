@@ -205,7 +205,7 @@ select {
   font-size: medium;
   font-family: "Prompt";
   margin: 3px 0 5px 0;
-  width: 10%;
+  width: 40px;
   border-radius: 5px;
   border: none;
 }
@@ -696,5 +696,9 @@ button {
     font-size: 30px;
     color: rgb(221, 190, 14);
     display: block;
+  }
+  #scrollTop {
+    width: 55px;
+    height: 55px;
   }
 }
