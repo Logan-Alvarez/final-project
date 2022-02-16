@@ -20,6 +20,11 @@ function Favorites() {
   const [hideJoke, setHideJoke] = useState<Boolean>(false);
   const [title, setTitle] = useState<string>("");
 
+  let scrollBtn = document.getElementById("scrollTop") as HTMLElement;
+  window.onscroll = function () {
+  scrollFunction();
+};
+
   useEffect(() => {
     fetchFavoriteJokes().then((data) => setJokes(data));
     getFavIcebreakers().then((data) => setIcebreakers(data));
@@ -59,6 +64,20 @@ function Favorites() {
     setHideIce(true);
     setTitle("Trivia");
   }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  }
 
   return (
     <div className="Favorites">
@@ -92,6 +111,9 @@ function Favorites() {
           <TriviaFavorites onSubmit={handleOnSubmitTrivia} trivias={trivias} />
         </div>
       )}
+      <button onClick={topFunction} id="scrollTop">
+        <i className="bi bi-arrow-up-circle-fill"></i>
+      </button>
       <Footer />
     </div>
   );
