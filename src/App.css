@@ -397,6 +397,10 @@ button {
   box-sizing: content-box;
 }
 
+.JokeFavorite h3{
+  color: #ffffff;
+}
+
 /* JOKES */
 
 .Jokes {
