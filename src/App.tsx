@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Main from "./components/main";
+
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Icebreakers } from "./components/Icebreakers-Folder/Icebreakers";
 import { Trivia } from "./components/Trivia-Folder/Trivia";
