@@ -5,7 +5,7 @@ import { IceBreakers } from "../models/Icebreakers";
 export function getIceBreakers(): Promise<IceBreakers[]> {
   return axios
     .get(
-      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/icebreakers"
+      "https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/icebreakers"
     )
     .then((res) => res.data);
 }
@@ -13,7 +13,7 @@ export function getIceBreakers(): Promise<IceBreakers[]> {
 export function getFavIcebreakers(): Promise<IceBreakers[]> {
   return axios
     .get(
-      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favicebreakers"
+      "https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favicebreakers"
     )
     .then((res) => res.data);
 }
@@ -23,7 +23,7 @@ export function postFavIcebreakers(
 ): Promise<IceBreakers> {
   return axios
     .post<IceBreakers>(
-      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favicebreakers",
+      "https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favicebreakers",
       iceBreaker
     )
     .then((res) => res.data);
@@ -32,7 +32,7 @@ export function postFavIcebreakers(
 export function deleteFavIcebreakers(_id: ObjectId): Promise<IceBreakers> {
   return axios
     .delete(
-      `http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favicebreakers/${_id}`
+      `https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favicebreakers/${_id}`
     )
     .then((res) => res.data);
 }

@@ -17,7 +17,7 @@ export function fetchJokes(): Promise<jokes[]> {
 export function fetchFavoriteJokes(): Promise<jokes[]> {
   return axios
     .get(
-      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes"
+      "https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favjokes"
     )
     .then((res) => res.data);
 }
@@ -25,7 +25,7 @@ export function fetchFavoriteJokes(): Promise<jokes[]> {
 export function postFavoriteJokes(joke: jokes): Promise<jokes> {
   return axios
     .post<jokes>(
-      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes",
+      "https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favjokes",
       joke
     )
     .then((res) => res.data);
@@ -34,7 +34,7 @@ export function postFavoriteJokes(joke: jokes): Promise<jokes> {
 export function deleteFavoriteJoke(_id: ObjectId): Promise<jokes> {
   return axios
     .delete(
-      `http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favjokes/${_id}`
+      `https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favjokes/${_id}`
     )
     .then((res) => res.data);
 }
