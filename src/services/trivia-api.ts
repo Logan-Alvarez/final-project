@@ -17,7 +17,7 @@ export function fetchTrivia(category: string): Promise<Trivia[]> {
 export function getFavTrivia(): Promise<Trivia[]> {
   return axios
     .get(
-      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favtrivia"
+      "https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favtrivia"
     )
     .then((res) => res.data);
 }
@@ -25,7 +25,7 @@ export function getFavTrivia(): Promise<Trivia[]> {
 export function postFavTrivia(favtrivia: Trivia): Promise<Trivia> {
   return axios
     .post(
-      "http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favtrivia",
+      "https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favtrivia",
       favtrivia
     )
     .then((res) => res.data);
@@ -34,8 +34,7 @@ export function postFavTrivia(favtrivia: Trivia): Promise<Trivia> {
 export function deleteFavTrivia(_id: ObjectId): Promise<Trivia> {
   return axios
     .delete(
-      `http://localhost:5001/final-project-backend-fbdd5/us-central1/api/favtrivia/${_id}`
+      `https://us-central1-final-project-backend-fbdd5.cloudfunctions.net/api/favtrivia/${_id}`
     )
     .then((res) => res.data);
 }
-
