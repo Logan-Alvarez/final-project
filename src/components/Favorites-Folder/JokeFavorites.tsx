@@ -15,7 +15,6 @@ function JokeFavorites({ jokes, onSubmit }: Prop) {
     deleteFavoriteJoke(foundId);
     onSubmit(index);
   }
-  console.log(jokes);
 
   return (
     <div className="JokeFavorites">

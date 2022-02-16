@@ -298,6 +298,7 @@ button {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: #192734;
 }
 
 .answerForm label {
@@ -317,6 +318,7 @@ button {
 .next-question {
   display: flex;
   justify-content: center;
+  background-color: #192734;
 }
 
 .know-it {
@@ -389,7 +391,7 @@ button {
   font-size: 25px;
   font-family: "Prompt";
   margin: 3px 0 5px 0;
-  width: 25%;
+  width: 140px;
   border-radius: 5px;
   border: none;
   box-sizing: content-box;
@@ -439,9 +441,10 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: #192734;
 }
 .Footer a {
-  font-size: 30px;
+  font-size: x-small;
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: underline;
@@ -547,6 +550,12 @@ button {
   .feature-container4 a {
     font-size: 50px;
   }
+  .feature-container4 {
+    background-color: #192734;
+  }
+  .Footer a {
+    font-size: medium;
+  }
 }
 
 /* Desktop */
@@ -646,6 +655,9 @@ button {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+  .Footer a {
+    font-size: x-large;
   }
 
   /* Favorites Page ------------------------------------------------------------------------------------------------------------- */
