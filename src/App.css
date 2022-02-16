@@ -42,7 +42,6 @@ a:active {
   align-items: center;
   background-color: #192734;
   color: #ffffff;
-  margin-bottom: 10px;
 }
 .Header p {
   font-size: x-large;
@@ -361,7 +360,6 @@ button {
   text-align: center;
   margin: 7px 0;
   border: 3px solid #22303c;
-  width: 97%;
 }
 .TriviaFavorites {
   text-align: center;
@@ -374,7 +372,7 @@ button {
 .TriviaFavorites-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+
   align-items: center;
 }
 
@@ -448,9 +446,7 @@ button {
   background-color: #192734;
 }
 .Footer a {
-  font-size: x-small;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-size: 14px;
   text-decoration: underline;
   text-decoration-color: rgb(221, 190, 14);
   text-decoration-style: solid;
